@@ -43,6 +43,10 @@ public class MapController : MonoBehaviour
             {
                 noTerrainPosition = currentChunk.transform.Find("Right").position;
                 SpawnChunk();
+                noTerrainPosition = currentChunk.transform.Find("Right Up").position;
+                SpawnChunk();
+                noTerrainPosition = currentChunk.transform.Find("Right Down").position;
+                SpawnChunk();
             }
         }
 
@@ -52,6 +56,10 @@ public class MapController : MonoBehaviour
                     terrainMask))
             {
                 noTerrainPosition = currentChunk.transform.Find("Left").position;
+                SpawnChunk();
+                noTerrainPosition = currentChunk.transform.Find("Left Up").position;
+                SpawnChunk();
+                noTerrainPosition = currentChunk.transform.Find("Left Down").position;
                 SpawnChunk();
             }
         }
@@ -63,6 +71,10 @@ public class MapController : MonoBehaviour
             {
                 noTerrainPosition = currentChunk.transform.Find("Up").position;
                 SpawnChunk();
+                noTerrainPosition = currentChunk.transform.Find("Left Up").position;
+                SpawnChunk();
+                noTerrainPosition = currentChunk.transform.Find("Right Up").position;
+                SpawnChunk();
             }
         }
         if (pm.moveDir.x == 0 && pm.moveDir.y < 0) //down
@@ -71,6 +83,10 @@ public class MapController : MonoBehaviour
                     terrainMask))
             {
                 noTerrainPosition = currentChunk.transform.Find("Down").position;
+                SpawnChunk();
+                noTerrainPosition = currentChunk.transform.Find("Left Down").position;
+                SpawnChunk();
+                noTerrainPosition = currentChunk.transform.Find("Right Down").position;
                 SpawnChunk();
             }
         }
