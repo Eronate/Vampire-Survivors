@@ -18,10 +18,12 @@ public class MapController : MonoBehaviour
     public GameObject latestChunk;
     public float maxOpDist; //Must be greater than the length and the witdth of the tilemap
     public float opDist;
-    public float optimizerCooldownDur;
+    public float optimizerCooldownDurValue;
+    private float optimizerCooldownDur;
     void Start()
     {
         pm = FindObjectOfType <PlayerMovement>();
+        optimizerCooldownDur = optimizerCooldownDurValue;
     }
 
     // Update is called once per frame
@@ -126,7 +128,7 @@ public class MapController : MonoBehaviour
 
         if(optimizerCooldownDur <=0f)
         {
-            optimizerCooldownDur = optimizerCooldownDur;
+            optimizerCooldownDur = optimizerCooldownDurValue;
         }
         else
         {
