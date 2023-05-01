@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -517411309
-  m_SortingLayer: 1
+  m_SortingLayerID: -1406821277
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 2037609657, guid: 68f00c2ee8efa374e9e8e5e6f0a0e5a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840c7a89294260d44a40be4e9e94f2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 9c24d72ad7199504581409f700dba2d9, type: 2}
+  weaponData: {fileID: 11400000, guid: b6ffbf6af0eb5e44d9bdad82da573b62, type: 2}
   destroyAfterSeconds: 3
 --- !u!60 &8552142160040659909
 PolygonCollider2D:

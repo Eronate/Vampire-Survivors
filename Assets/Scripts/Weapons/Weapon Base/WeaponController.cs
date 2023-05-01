@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
     [Header("Weapon Stats")]
-    public WeaponScriptableObject weaponData;
+    public WeaponSciptableObject weaponData;
     float currentCooldown;
-
     protected PlayerMovement pm;
     protected virtual void Start()
     {
