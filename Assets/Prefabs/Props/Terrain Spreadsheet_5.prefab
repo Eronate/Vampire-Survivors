@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6464757254461520889}
   - component: {fileID: 1999458699851861537}
   - component: {fileID: 246918270748721012}
+  - component: {fileID: 8563056791973384284}
   m_Layer: 0
   m_Name: Terrain Spreadsheet_5
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8563056791973384284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996507923194910673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d68ef6a1bfb094fb9ff1cd9722d6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10

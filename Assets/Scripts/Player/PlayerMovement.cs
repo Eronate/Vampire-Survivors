@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  
-
     [HideInInspector]
     public float lastHorizontalVector = 0;
 

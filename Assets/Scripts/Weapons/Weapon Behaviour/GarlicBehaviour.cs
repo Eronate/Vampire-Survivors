@@ -19,6 +19,14 @@ public class GarlicBehaviour : MeleeWeaponBehaviour
             enemy.TakeDamage(currentDamage);
             markedEnemies.Add(col.gameObject); //marked so it doesn't take another tick of damage from this garlic 
         }
+        else if (col.CompareTag("Prop"))
+        {
+            if (col.gameObject.TryGetComponent(out BreakableProps breakable))
+            {
+                breakable.TakeDamage(currentDamage);
+                markedEnemies.Add(col.gameObject);
+            }
+        }
     }
 
 }
