@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92753416c5cd75249838eab3109fa018, type: 3}
-  m_Name: Garlic Weapon
+  m_Script: {fileID: 11500000, guid: 9287b8f68e2ab1149aa1d421a53b23a3, type: 3}
+  m_Name: KnifeCharacter
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8990154813492000505, guid: a1ff794fcbc39cf49b94391d26c40a99, type: 3}
-  damage: 5
-  speed: 0
-  cooldownDuration: 3
-  pierce: 0
+  startingWeapon: {fileID: 0}
+  maxHealth: 0
+  recovery: 0
+  moveSpeed: 5
+  might: 0
+  projectileSpeed: 0
