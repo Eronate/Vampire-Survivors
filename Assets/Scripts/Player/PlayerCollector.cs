@@ -4,7 +4,19 @@ using UnityEngine;
 
 public class PlayerCollector : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D col)
+    PlayerStats player;
+    CircleCollider2D playerCollector;
+     void Start()
+    {
+        player = FindObjectOfType<PlayerStats>();
+        playerCollector= GetComponent<CircleCollider2D>();
+
+    }
+    void Update() 
+    {
+        playerCollector.radius = player.currentMagnet;
+    }
+    void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.TryGetComponent(out ICollectible collectible))
         {

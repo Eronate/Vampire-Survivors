@@ -16,13 +16,16 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public Vector2 lastMovedVector;
 
-    public CharacterScriptableObject characterData;
+    // public CharacterScriptableObject characterData; // no longer needed
+    PlayerStats player;
+
     public Rigidbody2D rb;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        player=GetComponent<PlayerStats>(); 
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2(1, 0f); //projectile goes right if no movement
     }
@@ -62,6 +65,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        rb.velocity = new Vector2(moveDir.x * characterData.MoveSpeed, moveDir.y * characterData.MoveSpeed);
+        rb.velocity = new Vector2(moveDir.x * player.currentMoveSpeed, moveDir.y * player.currentMoveSpeed);
     }
 }
