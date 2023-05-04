@@ -529,7 +529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd264c406f80154f8248967edd30710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 0}
   currentHealth: 1000
   currentRecovery: 0
   currentMoveSpeed: 0
@@ -1455,7 +1454,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1456620421171826421, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
       propertyPath: drops.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1456620421171826421, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
       propertyPath: drops.Array.data[1].name

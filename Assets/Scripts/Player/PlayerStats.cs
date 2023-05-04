@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public  CharacterScriptableObject characterData;
+    CharacterScriptableObject characterData;
 
     [HideInInspector]
     public float currentHealth;

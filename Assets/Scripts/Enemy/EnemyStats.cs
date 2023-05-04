@@ -40,4 +40,9 @@ public class EnemyStats : MonoBehaviour
             player.TakeDamage(currentDamage);
         }
     }
+
+    public float getHealth()
+    {
+        return currentHealth;
+    }
 }

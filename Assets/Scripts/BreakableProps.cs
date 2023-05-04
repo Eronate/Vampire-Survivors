@@ -17,4 +17,9 @@ public class BreakableProps : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public float getHealth()
+    {
+        return health;
+    }
 }

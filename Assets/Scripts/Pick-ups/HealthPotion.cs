@@ -9,7 +9,6 @@ public class HealthPotion : Pickup, ICollectible
     {
         PlayerStats player = FindObjectOfType<PlayerStats>();
         player.RestoreHealth(healthToRestore);
-  
     }
 
     

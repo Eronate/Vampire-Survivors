@@ -26,7 +26,7 @@ public class CharacterSelector : MonoBehaviour
     }  
     public void SelectCharacter(CharacterScriptableObject character)
     {
-        characterData= character;
+        characterData = character;
     }
     public void DestroySingleton()
     {
