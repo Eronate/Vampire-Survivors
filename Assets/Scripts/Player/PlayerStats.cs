@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-      public  CharacterScriptableObject characterData;
+    public  CharacterScriptableObject characterData;
 
     [HideInInspector]
     public float currentHealth;
@@ -44,8 +44,8 @@ public class PlayerStats : MonoBehaviour
     public List<LevelRange> levelRanges;
     private void Awake()
     {
-       // characterData = CharacterSelector.GetData();
-       // CharacterSelector.instance.DestroySingleton();
+        characterData = CharacterSelector.GetData();
+        CharacterSelector.instance.DestroySingleton();
         currentHealth = characterData.MaxHealth;
         currentRecovery = characterData.Recovery;
         currentMoveSpeed = characterData.MoveSpeed;

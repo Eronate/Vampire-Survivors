@@ -10,7 +10,7 @@ public class CharacterSelector : MonoBehaviour
     {
         if (instance == null)
         {
-            instance = null;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -22,7 +22,7 @@ public class CharacterSelector : MonoBehaviour
     }
     public static CharacterScriptableObject GetData()
     {
-        return instance.characterData;
+        return instance.characterData; 
     }  
     public void SelectCharacter(CharacterScriptableObject character)
     {
