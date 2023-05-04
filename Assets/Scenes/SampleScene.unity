@@ -529,8 +529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd264c406f80154f8248967edd30710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 2ce9c54b2ab4f154dbadff7747f8ef3b, type: 2}
-  currentHealth: 0
+  characterData: {fileID: 0}
+  currentHealth: 1000
   currentRecovery: 0
   currentMoveSpeed: 0
   currentMight: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283829521}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a38aeaa39ec9d14397c4c7490e6b852, type: 3}
   m_Name: 
@@ -567,7 +567,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283829521}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -697,6 +697,10 @@ PrefabInstance:
     - target: {fileID: 3391299537645710563, guid: 7c68771602851cc4590b5471d3985669, type: 3}
       propertyPath: m_Name
       value: Terrain Chunk Down
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391299538762802530, guid: 7c68771602851cc4590b5471d3985669, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c68771602851cc4590b5471d3985669, type: 3}
@@ -1449,6 +1453,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1456620421171826421, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
+      propertyPath: drops.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1456620421171826421, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
+      propertyPath: drops.Array.data[1].name
+      value: Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: -1456620421171826421, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
+      propertyPath: drops.Array.data[1].dropRate
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -1456620421171826421, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
+      propertyPath: drops.Array.data[1].itemPrefab
+      value: 
+      objectReference: {fileID: 2714502065291146524, guid: eac621420b99c0f4a90a0a7f7d4b2b63, type: 3}
     - target: {fileID: 529950346109077032, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
       propertyPath: m_Name
       value: Bat
