@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Terrain
-  - 
+  - Leaves
   - 
   - 
   - 
@@ -51,4 +51,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2888146019
+    locked: 0
+  - name: Foreground Props
+    uniqueID: 3620970537
     locked: 0
