@@ -587,6 +587,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_23
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 300
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c6c262771a82f4cbff2401d94037d7
+      internalID: 855986076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -614,6 +635,7 @@ TextureImporter:
       terrain_atlas_20: 1958234712
       terrain_atlas_21: -1795673295
       terrain_atlas_22: 504342472
+      terrain_atlas_23: 855986076
       terrain_atlas_3: -1694169639
       terrain_atlas_4: 185804493
       terrain_atlas_5: 1846652669

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MapController : MonoBehaviour
 {
     public List<GameObject> terrainChunks;
+    public List<float> terrainChunksProbability;
     public GameObject player;
     public float checkerRadius;
     Vector3 noTerrainPosition;
@@ -38,7 +39,6 @@ public class MapController : MonoBehaviour
         {
             return; 
         }
-
         if (pm.moveDir.x > 0) //right
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right").position, checkerRadius, terrainMask))
@@ -117,8 +117,17 @@ public class MapController : MonoBehaviour
     }
     void SpawnChunk()
     {
-        int rand = Random.Range(0, terrainChunks.Count);
-        latestChunk = Instantiate(terrainChunks[rand], noTerrainPosition, Quaternion.identity);
+        float rand = Random.Range(0.0f, 1.0f);
+        float totalProb = 0.0f;
+        for(int i = 0; i < terrainChunks.Count; i++)
+        {
+            totalProb += terrainChunksProbability[i];
+            if(rand <= totalProb)
+            {
+                latestChunk = Instantiate(terrainChunks[i], noTerrainPosition, Quaternion.identity);
+                break;
+            }
+        }
         spawnedChunks.Add(latestChunk);
     }
 
