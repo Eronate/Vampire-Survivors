@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 1960875f57c08414ba31d0ac302ed0bb, type: 3}
+    - {fileID: 2800000, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+    - {fileID: 2800000, guid: 5b113509aced46545808ee7b95a36946, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 2073731373, guid: 5b113509aced46545808ee7b95a36946, type: 3}
+  - {fileID: -1678831114, guid: 5b113509aced46545808ee7b95a36946, type: 3}
+  - {fileID: -419586487, guid: 5b113509aced46545808ee7b95a36946, type: 3}
+  - {fileID: 1715076891, guid: 5b113509aced46545808ee7b95a36946, type: 3}
+  - {fileID: 1231514517, guid: 5b113509aced46545808ee7b95a36946, type: 3}
+  - {fileID: 55967664, guid: 5b113509aced46545808ee7b95a36946, type: 3}
+  - {fileID: 855986076, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 504342472, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 949432313, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -1795673295, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -184686968, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 1958234712, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 490954933, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -1521858572, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -1369565688, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -1277450701, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 1915144155, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -1927294569, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 532915426, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -420865434, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 691981599, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 257346802, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -1017080531, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -34946180, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 1846652669, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 185804493, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: -1694169639, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 176482405, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 1924508084, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 1481226180, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
+  - {fileID: 1542247015, guid: 1960875f57c08414ba31d0ac302ed0bb, type: 3}
+  - {fileID: 88131151, guid: 1960875f57c08414ba31d0ac302ed0bb, type: 3}
+  - {fileID: -1004060876, guid: 1960875f57c08414ba31d0ac302ed0bb, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - torch_2
+  - torch_3
+  - torch_0
+  - torch_1
+  - torch_4
+  - torch_5
+  - terrain_atlas_23
+  - terrain_atlas_22
+  - terrain_atlas_18
+  - terrain_atlas_21
+  - terrain_atlas_19
+  - terrain_atlas_20
+  - terrain_atlas_12
+  - terrain_atlas_13
+  - terrain_atlas_10
+  - terrain_atlas_11
+  - terrain_atlas_16
+  - terrain_atlas_17
+  - terrain_atlas_14
+  - terrain_atlas_15
+  - terrain_atlas_9
+  - terrain_atlas_8
+  - terrain_atlas_7
+  - terrain_atlas_6
+  - terrain_atlas_5
+  - terrain_atlas_4
+  - terrain_atlas_3
+  - terrain_atlas_2
+  - terrain_atlas_1
+  - terrain_atlas_0
+  - base_out_atlas_0
+  - base_out_atlas_1
+  - base_out_atlas_2
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0
