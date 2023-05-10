@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonStats : EnemyStats
+public class MeleeEnemyStats : EnemyStats
 {
     // Start is called before the first frame update
     Animator animator;
     int hitTriggerHash;
     int dieTriggerHash;
     int attackTriggerHash;
-    private Collider2D collider;
     private void Start()
     {
         animator= GetComponent<Animator>();

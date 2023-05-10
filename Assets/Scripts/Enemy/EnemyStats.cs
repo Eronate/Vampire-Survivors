@@ -16,6 +16,7 @@ public class EnemyStats : MonoBehaviour
     public float despawnDistance = 20f;
     protected bool isEnemyInContact = false;
     Transform player;
+    protected Collider2D collider;
     void Awake()
     {
         currentMoveSpeed = enemyData.MoveSpeed;
