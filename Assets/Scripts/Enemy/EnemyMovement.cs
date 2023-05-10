@@ -19,7 +19,11 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveDir = transform.position - player.transform.position;
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMoveSpeed * Time.deltaTime);
+        EnemyStats stats = GetComponent<EnemyStats>();
+        if(stats.currentHealth > 0)
+        {
+            moveDir = transform.position - player.transform.position;
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMoveSpeed * Time.deltaTime);
+        }
     }
 }

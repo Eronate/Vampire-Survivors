@@ -13,7 +13,6 @@ public class SkeletonStats : EnemyStats
     {
         animator= GetComponent<Animator>();
         hitTriggerHash = Animator.StringToHash("Hit");
-        dieTriggerHash = Animator.StringToHash("Die");
         attackTriggerHash = Animator.StringToHash("Attack");
     }
     public override void TakeDamage(float dmg)
@@ -23,7 +22,7 @@ public class SkeletonStats : EnemyStats
     }
     public override void Kill()
     {
-        animator.SetTrigger(dieTriggerHash);
+        animator.SetBool("Die", true);
     }
     protected override void OnCollisionStay2D(Collision2D collision)
     {
