@@ -53,9 +53,9 @@ public class GameManager : MonoBehaviour
                 if(!isOver)
                 {
                     isOver = true;
-                    Time.timeScale = 0f; //Stpo the game entirely 
-                    Debug.Log("Game is over");
-                    DisplayResults();
+                    //Time.timeScale = 0f; //Stpo the game entirely 
+                    //Debug.Log("Game is over");
+                    //StartCoroutine(_DisplayResults());
                 }
                 break;
             default:
@@ -129,12 +129,13 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         ChangeState(GameState.GameOver);
-
     }
-    void DisplayResults()
-    {
-        resultScreen.SetActive(true);
-    }
+    //IEnumerator _DisplayResults()
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //    resultScreen.SetActive(true);
+        
+    //}
     public void AssignChosenCharacterUI(CharacterScriptableObject chosenCharacterData)
     {
 
@@ -178,5 +179,8 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
+    public GameObject getResultScreen()
+    {
+        return resultScreen;
+    }
 }
