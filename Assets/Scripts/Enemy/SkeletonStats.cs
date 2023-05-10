@@ -9,6 +9,7 @@ public class SkeletonStats : EnemyStats
     int hitTriggerHash;
     int dieTriggerHash;
     int attackTriggerHash;
+    private Collider2D collider;
     private void Start()
     {
         animator= GetComponent<Animator>();
@@ -24,17 +25,25 @@ public class SkeletonStats : EnemyStats
     {
         animator.SetBool("Die", true);
     }
-    protected override void OnCollisionStay2D(Collision2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            isEnemyInContact = true;
             animator.SetTrigger(attackTriggerHash);
-            PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
-            player.TakeDamage(currentDamage);
+            collider = collision;
         }
     }
     private void Death()
     {
         Destroy(gameObject);
+    }
+    private void DoDamage()
+    {
+        if(isEnemyInContact == true)
+        {
+            PlayerStats player = collider.gameObject.GetComponent<PlayerStats>();
+            player.TakeDamage(currentDamage);
+        }
     }
 }

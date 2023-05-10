@@ -14,6 +14,7 @@ public class EnemyStats : MonoBehaviour
     public float currentDamage;
 
     public float despawnDistance = 20f;
+    protected bool isEnemyInContact = false;
     Transform player;
     void Awake()
     {
@@ -49,12 +50,20 @@ public class EnemyStats : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    protected virtual void OnCollisionStay2D(Collision2D col)
+    protected virtual void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            isEnemyInContact = true;
             PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
             player.TakeDamage(currentDamage);
+        }
+    }
+    protected virtual void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            isEnemyInContact = false;
         }
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     CharacterScriptableObject characterData;
+
     float currentHealth;
     float currentRecovery;
     float currentMoveSpeed;
