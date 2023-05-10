@@ -36,7 +36,7 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float dmg)
+    public virtual void TakeDamage(float dmg)
     {
         currentHealth -= dmg;
         if(currentHealth <= 0)
@@ -45,11 +45,11 @@ public class EnemyStats : MonoBehaviour
         }
 
     }
-    public void Kill()
+    public virtual void Kill()
     {
         Destroy(gameObject);
     }
-    private void OnCollisionStay2D(Collision2D col)
+    protected virtual void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {

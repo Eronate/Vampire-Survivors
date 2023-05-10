@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
 
     EnemyStats enemy;
     Transform player;
+    public Vector2 moveDir;
     
     void Start()
     {
@@ -18,6 +19,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        moveDir = transform.position - player.transform.position;
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMoveSpeed * Time.deltaTime);
     }
 }
