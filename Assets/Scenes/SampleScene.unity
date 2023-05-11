@@ -4141,6 +4141,7 @@ MonoBehaviour:
   chosenCharacterImage: {fileID: 1790904778}
   chosenCharacterName: {fileID: 1575172419}
   levelReachedDisplay: {fileID: 796629833}
+  timeSurvivedDisplay: {fileID: 289588292}
   chosenWeaponsUI:
   - {fileID: 1914302882}
   - {fileID: 874222375}

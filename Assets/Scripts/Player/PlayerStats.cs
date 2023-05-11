@@ -18,10 +18,12 @@ public class PlayerStats : MonoBehaviour
     public float CurrentHealth
     {
         get { return currentHealth; }
-        set { if(currentHealth!= value)
+        set
+        {
+            if (currentHealth != value)
             {
-                currentHealth= value; 
-                if(GameManager.instance!=null)  //make sure Gamemnager has been instantiated prior to Player stats script acces it.
+                currentHealth = value;
+                if (GameManager.instance != null)  //make sure Gamemnager has been instantiated prior to Player stats script acces it.
                 {
                     GameManager.instance.currentHealtDisplay.text = "Health: " + currentHealth;
                 }
@@ -161,7 +163,7 @@ public class PlayerStats : MonoBehaviour
         experienceCap = levelRanges[0].experienceCapIncrease;
         GameManager.instance.currentRecoveryDisplay.text = "Recovery: " + currentRecovery;
         GameManager.instance.currentHealtDisplay.text = "Health: " + currentHealth;
-        GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed : " +currentProjectileSpeed;
+        GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed : " + currentProjectileSpeed;
         GameManager.instance.currentMoveSpeedDisplay.text = "Movement Speed: " + currentMoveSpeed;
         GameManager.instance.currentMightDisplay.text = "Might: " + currentMight;
         GameManager.instance.currentMagnetDisplay.text = "Magnet: " + currentMagnet;
@@ -171,11 +173,11 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        if(invincibilityTimer> 0)
+        if (invincibilityTimer > 0)
         {
             invincibilityTimer -= Time.deltaTime;
         }
-        else if(isInvincible)
+        else if (isInvincible)
         {
             isInvincible = false;
         }
@@ -190,7 +192,7 @@ public class PlayerStats : MonoBehaviour
 
     void LevelUpChecker()
     {
-        if(experience >= experienceCap )
+        if (experience >= experienceCap)
         {
             level++;
             experience -= experienceCap;
@@ -198,7 +200,7 @@ public class PlayerStats : MonoBehaviour
             int experienceCapIncrease = 0;
             foreach (LevelRange range in levelRanges)
             {
-                if(level >= range.startLevel && level <= range.endLevel)
+                if (level >= range.startLevel && level <= range.endLevel)
                 {
                     experienceCapIncrease = range.experienceCapIncrease;
                     break;
@@ -219,13 +221,14 @@ public class PlayerStats : MonoBehaviour
                 Kill();
             }
         }
-        
+
     }
     public void Kill()
     {
-        if(!GameManager.instance.isOver)
+        if (!GameManager.instance.isOver)
         {
             GameManager.instance.AssignLevelReachedUI(level);
+            GameManager.instance.AssignTimeSurvived();
             GameManager.instance.AssignChosenWeaponAndPassiveItemUI(inventory.weaponUISlots, inventory.passiveItemUISlots);
             GameManager.instance.GameOver();
         }
@@ -235,21 +238,21 @@ public class PlayerStats : MonoBehaviour
     public void RestoreHealth(float amount)
     {
         CurrentHealth += amount;
-        if(CurrentHealth > characterData.MaxHealth)
+        if (CurrentHealth > characterData.MaxHealth)
         {
             CurrentHealth = characterData.MaxHealth;
         }
     }
     void Recover()
     {
-        if(CurrentHealth < characterData.MaxHealth)
+        if (CurrentHealth < characterData.MaxHealth)
         {
-            CurrentHealth += CurrentRecovery * Time.deltaTime; 
+            CurrentHealth += CurrentRecovery * Time.deltaTime;
         }
     }
     public void SpawnWeapon(GameObject weapon)
     {
-        if(weaponIndex >= inventory.weaponSlots.Count - 1)
+        if (weaponIndex >= inventory.weaponSlots.Count - 1)
         {
             Debug.LogError("Inventory slots already full");
             return;

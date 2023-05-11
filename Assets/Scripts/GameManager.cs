@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -35,8 +36,12 @@ public class GameManager : MonoBehaviour
     public Image chosenCharacterImage;
     public Text chosenCharacterName;
     public Text levelReachedDisplay;
+    public Text timeSurvivedDisplay;
+
     public List<Image> chosenWeaponsUI = new List<Image>(6);
-    public List<Image> chosenPassiveUI= new List<Image>(6);
+    public List<Image> chosenPassiveUI = new List<Image>(6);
+
+    private float timeSurvived;
 
     public bool isOver = false;
     void Update()
@@ -44,13 +49,14 @@ public class GameManager : MonoBehaviour
         switch (currentState)
         {
             case GameState.Gameplay:
+                timeSurvived = timeSurvived + Time.deltaTime;
                 CheckForPauseAndResume();
                 break;
             case GameState.Paused:
                 CheckForPauseAndResume();
-                break; 
-            case GameState.GameOver:      
-                if(!isOver)
+                break;
+            case GameState.GameOver:
+                if (!isOver)
                 {
                     isOver = true;
                     //Time.timeScale = 0f; //Stpo the game entirely 
@@ -61,13 +67,13 @@ public class GameManager : MonoBehaviour
             default:
                 Debug.LogWarning("State does not exist");
                 break;
-                       
+
         }
 
     }
     void Awake()
     {
-        if(instance==null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -76,24 +82,30 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("Extra" + this + "deleted");
             Destroy(gameObject);
         }
-       DisableScreens(); 
+        DisableScreens();
     }
+
+    public void Start()
+    {
+        timeSurvived = 0f;
+    }
+
     public void ChangeState(GameState newState)
     {
         currentState = newState;
     }
     public void PauseGame()
     {
-        if(currentState!= GameState.Paused)
+        if (currentState != GameState.Paused)
         {
-            previoudState= currentState;
-    
+            previoudState = currentState;
+
             ChangeState(GameState.Paused);
             pauseScreen.SetActive(true);
             Time.timeScale = 0f; // stop the game
-        Debug.Log("Games is paused");
+            Debug.Log("Games is paused");
         }
-   
+
 
     }
     public void ResumeGame()
@@ -110,21 +122,22 @@ public class GameManager : MonoBehaviour
     }
     void CheckForPauseAndResume()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(currentState==GameState.Paused)
+            if (currentState == GameState.Paused)
             {
-                ResumeGame(); 
+                ResumeGame();
             }
             else
             {
                 PauseGame();
             }
         }
-    }void DisableScreens()
+    }
+    void DisableScreens()
     {
         pauseScreen.SetActive(false);
-        resultScreen.SetActive(false); 
+        resultScreen.SetActive(false);
     }
     public void GameOver()
     {
@@ -134,27 +147,32 @@ public class GameManager : MonoBehaviour
     //{
     //    yield return new WaitForSeconds(1f);
     //    resultScreen.SetActive(true);
-        
+
     //}
     public void AssignChosenCharacterUI(CharacterScriptableObject chosenCharacterData)
     {
 
         chosenCharacterImage.sprite = chosenCharacterData.Icon;
-        chosenCharacterName.text = chosenCharacterData.name; 
+        chosenCharacterName.text = chosenCharacterData.name;
     }
     public void AssignLevelReachedUI(int levell)
     {
-        levelReachedDisplay.text=levell.ToString();
+        levelReachedDisplay.text = levell.ToString();
+    }
+    public void AssignTimeSurvived()
+    {
+        TimeSpan timeSpan = TimeSpan.FromSeconds(timeSurvived);
+        timeSurvivedDisplay.text = timeSpan.ToString(@"mm\:ss");
     }
 
     public void AssignChosenWeaponAndPassiveItemUI(List<Image> chosenWeaponData, List<Image> chosenPassiveItemData)
     {
-        if(chosenWeaponData.Count!=chosenWeaponsUI.Count || chosenPassiveItemData.Count != chosenPassiveUI.Count)
+        if (chosenWeaponData.Count != chosenWeaponsUI.Count || chosenPassiveItemData.Count != chosenPassiveUI.Count)
         {
             Debug.Log("Chosen weapons and passive items data list have diferent lengths");
             return;
         }
-        for(int i=0;i<chosenWeaponsUI.Count;i++)
+        for (int i = 0; i < chosenWeaponsUI.Count; i++)
         {
             if (chosenWeaponData[i].sprite)
             {
@@ -163,7 +181,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                chosenWeaponsUI[i].enabled = false; 
+                chosenWeaponsUI[i].enabled = false;
             }
         }
         for (int i = 0; i < chosenPassiveUI.Count; i++)
@@ -174,7 +192,7 @@ public class GameManager : MonoBehaviour
                 chosenPassiveUI[i].sprite = chosenPassiveItemData[i].sprite;
             }
             else
-            { 
+            {
                 chosenPassiveUI[i].enabled = false;
             }
         }
