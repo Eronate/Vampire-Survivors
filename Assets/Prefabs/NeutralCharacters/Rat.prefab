@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 5451339783093815271}
   - component: {fileID: 226839938166646341}
   - component: {fileID: 4393966459104515441}
+  - component: {fileID: 1355069622200405599}
+  - component: {fileID: -1787479555680783775}
+  - component: {fileID: 6973474013995459494}
+  - component: {fileID: 5061550663490572662}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -73,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1406821277
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: -1242851035, guid: ae10732f653adfe49bcaa9ffc9f16e8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -106,3 +110,71 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1355069622200405599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939858044614861240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d134f539057c742b6c9f02c905f0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDuration: 1
+  maxMoveDuration: 3
+  moveDirection: {x: 0, y: 0}
+--- !u!114 &-1787479555680783775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939858044614861240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9818015cf213c7d4a9293d69dad660a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neutralData: {fileID: 11400000, guid: 248dfc0227ac40f44a34d38bfac853e3, type: 2}
+  despawnDistance: 20
+--- !u!114 &6973474013995459494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939858044614861240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1163b5ff770dc1645a3c33b3abc8d068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!61 &5061550663490572662
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939858044614861240}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.018654466, y: -0.3491062}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54494643, y: 0.39571}
+  m_EdgeRadius: 0
