@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileWeaponBehaviour : MonoBehaviour
 {
-    public WeaponSciptableObject weaponData;
+    public WeaponScriptableObject weaponData;
     protected Vector3 direction;
     public float destroyAfterSeconds;
 
@@ -32,7 +32,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void DirectionChecker(Vector3 dir)
+    public virtual void DirectionChecker(Vector3 dir)
     {
         direction = dir;
         float dirx = direction.x;

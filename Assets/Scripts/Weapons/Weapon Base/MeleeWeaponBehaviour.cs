@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeleeWeaponBehaviour : MonoBehaviour
 {
-    public WeaponSciptableObject weaponData;
+    public WeaponScriptableObject weaponData;
     public float destroyAfterSeconds;
 
     protected float currentDamage;

@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     [Header("Weapon Stats")]
-    public WeaponSciptableObject weaponData;
+    public WeaponScriptableObject weaponData;
     float currentCooldown;
     protected PlayerMovement pm;
     protected virtual void Start()

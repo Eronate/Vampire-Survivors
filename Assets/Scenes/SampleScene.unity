@@ -1211,7 +1211,7 @@ MonoBehaviour:
     experienceCapIncrease: 200
   weaponIndex: 0
   passiveItemIndex: 0
-  secondWeaponTest: {fileID: 5337568453569880001, guid: f50d9030e045f6d44a36c3e5adc3c23f, type: 3}
+  secondWeaponTest: {fileID: 494941141917784224, guid: 34249f8682c863c4188db99b84adfd50, type: 3}
   firstPassiveItemTest: {fileID: 8797496490460489717, guid: f38893d1acd537146ab87f959d34ecde, type: 3}
   secondPassiveItemTest: {fileID: 665378458165626558, guid: 1a7542fb401a24247be22d478a808038, type: 3}
 --- !u!114 &283829530

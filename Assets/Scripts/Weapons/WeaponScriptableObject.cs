@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="WeaponScriptableObject",menuName ="ScriptableObjects/Weapon")]
-public class WeaponSciptableObject : ScriptableObject
+public class WeaponScriptableObject : ScriptableObject
 {
 
     [SerializeField]
