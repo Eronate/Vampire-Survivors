@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyAnimator : MonoBehaviour
 {
-    // Start is called before the first frame update
     Animator am;
     EnemyMovement em;
     SpriteRenderer sr;
@@ -15,8 +14,6 @@ public class EnemyAnimator : MonoBehaviour
         em = GetComponent<EnemyMovement>();
         sr = GetComponent<SpriteRenderer>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (em.moveDir.x != 0 || em.moveDir.y != 0)

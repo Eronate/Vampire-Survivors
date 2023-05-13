@@ -7,7 +7,6 @@ public class MeleeEnemyStats : EnemyStats
     // Start is called before the first frame update
     Animator animator;
     int hitTriggerHash;
-    int dieTriggerHash;
     int attackTriggerHash;
     private void Start()
     {
