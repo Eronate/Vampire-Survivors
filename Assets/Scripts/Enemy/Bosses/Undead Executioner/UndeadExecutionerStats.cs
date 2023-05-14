@@ -22,7 +22,6 @@ public class UndeadExecutionerStats : EnemyStats
     }
     public override void TakeDamage(float dmg)
     {
-        Debug.Log("Damage took");
         animator.TriggerHit();
         base.TakeDamage(dmg);
     }

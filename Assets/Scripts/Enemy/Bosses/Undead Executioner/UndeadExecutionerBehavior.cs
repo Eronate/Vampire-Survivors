@@ -38,7 +38,6 @@ public class UndeadExecutionerBehavior : MonoBehaviour
     }
     void ChooseNewAction()
     {
-        Debug.Log("Atac departare generat");
         int chance = Random.Range(0, spellFrequency + healFrequency + 1);
         if(chance < healFrequency)
         {

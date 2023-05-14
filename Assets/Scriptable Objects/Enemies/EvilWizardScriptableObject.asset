@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6408f563cbac7e94eaacc08d0188ff1b, type: 3}
-  m_Name: UndeadExecutionerScriptableObject
+  m_Script: {fileID: 11500000, guid: 926ac364c1f401640b91ecef90eda276, type: 3}
+  m_Name: EvilWizardScriptableObject
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  maxHealth: 500
-  damage: 20
-  spellFrequency: 0
-  healFrequency: 0
-  minTimeSinceLastAction: 6.5
-  maxTimeSinceLastAction: 9
+  moveSpeed: 3.5
+  maxHealth: 100
+  damage: 30
+  baseAttackFrequency: 65
+  specialAttackMultipler: 1.25
