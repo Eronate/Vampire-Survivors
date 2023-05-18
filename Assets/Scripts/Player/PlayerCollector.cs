@@ -25,7 +25,7 @@ public class PlayerCollector : MonoBehaviour
             //Gets the Rigidbody2D component on the item
             Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();
             Vector2 forceDirection = (transform.position - col.transform.position).normalized;
-             
+
             rb.AddForce(forceDirection * pullSpeed);
             collectible.Collect();
         }
