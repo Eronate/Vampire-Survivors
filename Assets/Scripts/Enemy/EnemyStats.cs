@@ -17,20 +17,20 @@ public class EnemyStats : MonoBehaviour
     protected bool isEnemyInContact = false;
     Transform player;
     protected Collider2D collider;
-    void Awake()
+    protected virtual void Awake()
     {
         currentMoveSpeed = enemyData.MoveSpeed;
         currentHealth = enemyData.MaxHealth;
         currentDamage = enemyData.Damage;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         player = FindObjectOfType<PlayerStats>().transform;
 
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if(Vector2.Distance(transform.position,player.position) >= despawnDistance)
         {

@@ -10,7 +10,7 @@ public class WeaponScriptableObject : ScriptableObject
     [SerializeField]
 
     GameObject prefab;
-   public GameObject Prefab { get => prefab; private set=> prefab = value;  }
+    public GameObject Prefab { get => prefab; private set=> prefab = value;  }
 
     [SerializeField]
 
