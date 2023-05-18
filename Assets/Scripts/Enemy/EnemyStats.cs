@@ -32,9 +32,12 @@ public class EnemyStats : MonoBehaviour
 
     protected virtual void Update()
     {
-        if(Vector2.Distance(transform.position,player.position) >= despawnDistance)
+        if (player != null)
         {
-            ReturnEnemy();
+            if (Vector2.Distance(transform.position, player.position) >= despawnDistance)
+            {
+                ReturnEnemy();
+            }
         }
     }
 
