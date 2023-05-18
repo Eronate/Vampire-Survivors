@@ -13,6 +13,11 @@ public class PlayerStats : MonoBehaviour
     float currentProjectileSpeed;
     float currentMagnet;
 
+   // public HpBarController healthbar;
+   // public XPBarController xpbar;
+    public XPBarController xpbar_player;
+    public HpBarController healthbar_player;
+
     #region Current Stats Proprieties
 
     public float CurrentHealth
@@ -167,8 +172,16 @@ public class PlayerStats : MonoBehaviour
         GameManager.instance.currentMoveSpeedDisplay.text = "Movement Speed: " + currentMoveSpeed;
         GameManager.instance.currentMightDisplay.text = "Might: " + currentMight;
         GameManager.instance.currentMagnetDisplay.text = "Magnet: " + currentMagnet;
-
+        GameManager.instance.currentLevelDisplay.text = "" + level;
         GameManager.instance.AssignChosenCharacterUI(characterData);
+      //  healthbar.SetMaxHealth(CurrentHealth);
+      //  xpbar.SetMaxXp(experienceCap);
+
+     //   xpbar.SetXp(0);
+        healthbar_player.SetMaxHealth(CurrentHealth);
+        xpbar_player.SetMaxXp(experienceCap);
+
+        xpbar_player.SetXp(0);
     }
 
     void Update()
@@ -187,6 +200,11 @@ public class PlayerStats : MonoBehaviour
     public void IncreaseExperience(int amount)
     {
         experience += amount;
+        if (experience <= experienceCap)
+        {
+            //xpbar.SetXp(experience);
+            xpbar_player.SetXp(experience);
+        }
         LevelUpChecker();
     }
 
@@ -194,9 +212,12 @@ public class PlayerStats : MonoBehaviour
     {
         if (experience >= experienceCap)
         {
+            GameManager.instance.currentLevelDisplay.text = "" + level;
             level++;
             experience -= experienceCap;
 
+            //xpbar.SetXp(experience);
+            xpbar_player.SetXp(experience);
             int experienceCapIncrease = 0;
             foreach (LevelRange range in levelRanges)
             {
@@ -207,6 +228,9 @@ public class PlayerStats : MonoBehaviour
                 }
             }
             experienceCap += experienceCapIncrease;
+           // xpbar.SetMaxXp(experienceCap);
+            xpbar_player.SetMaxXp(experienceCap);
+
         }
     }
     public void TakeDamage(float dmg)
@@ -216,14 +240,16 @@ public class PlayerStats : MonoBehaviour
             CurrentHealth -= dmg;
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;
+          //  healthbar.SetHealth(CurrentHealth);
+            healthbar_player.SetHealth(CurrentHealth);
+
             if (CurrentHealth <= 0)
             {
                 Kill();
             }
         }
-
     }
-    public void Kill()
+        public void Kill()
     {
         if (!GameManager.instance.isOver)
         {

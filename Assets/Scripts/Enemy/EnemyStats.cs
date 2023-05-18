@@ -73,8 +73,12 @@ public class EnemyStats : MonoBehaviour
 
     private void OnDestroy()
     {
-        EnemySpawner es = FindAnyObjectByType<EnemySpawner>(); 
+        if(FindAnyObjectByType<EnemySpawner>()!=null)
+        {
+     EnemySpawner es = FindAnyObjectByType<EnemySpawner>(); 
         es.OnEnemyKilled();
+        }
+   
     }
 
     public float getHealth()

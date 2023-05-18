@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public Text currentMightDisplay;
     public Text currentProjectileSpeedDisplay;
     public Text currentMagnetDisplay;
+    // LVL Display
+    public Text currentLevelDisplay;
 
 
     [Header("Result Stats Display")]
