@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -2349230849631444344}
   - component: {fileID: 6491115722665053437}
   - component: {fileID: -6026626119072606459}
+  - component: {fileID: 3781568686001262275}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -205,3 +206,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.895048, y: 0.91575193}
   m_EdgeRadius: 0
+--- !u!114 &3781568686001262275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6458253776177078782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01051721c55304842b107922fd9d67d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Green Gem
+    itemPrefab: {fileID: 3359604356969219567, guid: d8f97554758bccf4ead2be68cd6da1af, type: 3}
+    dropRate: 100

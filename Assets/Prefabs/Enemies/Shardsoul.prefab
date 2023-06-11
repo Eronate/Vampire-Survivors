@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -6454898792192534069}
   - component: {fileID: 4586131046830224435}
   - component: {fileID: 1496166025061410187}
+  - component: {fileID: 1839527423508768418}
   m_Layer: 0
   m_Name: Shardsoul
   m_TagString: Enemy
@@ -205,3 +206,19 @@ MonoBehaviour:
   currentHealth: 0
   currentDamage: 0
   despawnDistance: 20
+--- !u!114 &1839527423508768418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6849200936561296291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01051721c55304842b107922fd9d67d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Green Gem
+    itemPrefab: {fileID: 3359604356969219567, guid: d8f97554758bccf4ead2be68cd6da1af, type: 3}
+    dropRate: 100

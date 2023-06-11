@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 3639561948906108697}
   - component: {fileID: 3377714579692764608}
   - component: {fileID: -8601386348577621295}
+  - component: {fileID: -8041084451861764169}
   m_Layer: 0
   m_Name: UndeadExecutioner
   m_TagString: Enemy
@@ -193,9 +194,9 @@ MonoBehaviour:
   currentDamage: 0
   despawnDistance: 20
   healValue: 50
-  insideActivationRange: 0
-  insideMeleeAttackRange: 0
   animator: {fileID: 0}
+  meleeRange: {fileID: 0}
+  spellRange: {fileID: 0}
 --- !u!114 &-7005959182846915733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +260,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDetected: 0
+--- !u!114 &-8041084451861764169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263114769507810703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01051721c55304842b107922fd9d67d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Diamond
+    itemPrefab: {fileID: 2734706695332962726, guid: 666f5dc12fb3ab143b1783a3c2be0cd8, type: 3}
+    dropRate: 100
 --- !u!1 &8353510607880557049
 GameObject:
   m_ObjectHideFlags: 0
