@@ -263,17 +263,27 @@ public class PlayerStats : MonoBehaviour
 
     public void RestoreHealth(float amount)
     {
+
         CurrentHealth += amount;
+ 
         if (CurrentHealth > characterData.MaxHealth)
         {
+           
             CurrentHealth = characterData.MaxHealth;
+            healthbar_player.SetHealth(CurrentHealth);
+        }
+        else
+        {
+            healthbar_player.SetHealth(CurrentHealth);
         }
     }
     void Recover()
     {
         if (CurrentHealth < characterData.MaxHealth)
         {
+
             CurrentHealth += CurrentRecovery * Time.deltaTime;
+            healthbar_player.SetHealth(CurrentHealth);
         }
     }
     public void SpawnWeapon(GameObject weapon)
