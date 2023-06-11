@@ -8,6 +8,8 @@ public class Pickup : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            ICollectible gobj = gameObject.TryGetComponent(out ICollectible obj) ? obj : null;
+            gobj.Collect();
             Destroy(gameObject);
         }
     }
