@@ -28,7 +28,6 @@ public class PlayerCollector : MonoBehaviour
 
     IEnumerator _KeepFollowing(Collider2D col)
     {
-       
        while (col != null && col.gameObject.TryGetComponent(out ICollectible collectible) )
             {
                 Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();

@@ -1361,14 +1361,9 @@ MonoBehaviour:
   experience: 0
   level: 1
   experienceCap: 0
+  experienceCapIncrease: 0
+  experienceMultiplier: 1.2
   invincibilityDuration: 0.5
-  levelRanges:
-  - startLevel: 1
-    endLevel: 3
-    experienceCapIncrease: 100
-  - startLevel: 4
-    endLevel: 5
-    experienceCapIncrease: 200
   weaponIndex: 0
   passiveItemIndex: 0
   secondWeaponTest: {fileID: 494941141917784224, guid: 34249f8682c863c4188db99b84adfd50, type: 3}

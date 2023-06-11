@@ -15,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
         public int spawnCount; //The number of enemies already spawned in this wave
     }
 
+    public List<GameObject> listOfEnemies;
+
     [System.Serializable]
     public class EnemyGroup
     {
@@ -25,6 +27,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public List<Wave> waves; //A list of all the waves in the game
+
     public int currentWaveCount; //The index of the current wave [list starts from 0]
 
     [Header("Spawner Attributes")]
@@ -40,6 +43,7 @@ public class EnemySpawner : MonoBehaviour
     Transform player;
     void Start()
     {
+
         player = FindObjectOfType<PlayerStats>().transform;
         CalculateWaveQuota();
     }

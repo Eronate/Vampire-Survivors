@@ -117,23 +117,23 @@ public class PlayerStats : MonoBehaviour
     public int experience = 0;
     public int level = 1;
     public int experienceCap;
-
+    public int experienceCapIncrease;
+    public float experienceMultiplier = 1.2f;
     //Class for defining a level range and the corresponding experience cap increase for that range
-    [System.Serializable]
-    public class LevelRange
-    {
-        public int startLevel;
-        public int endLevel;
-        public int experienceCapIncrease;
-
-    }
+    //[System.Serializable]
+    //public class LevelRange
+    //{
+    //    public int startLevel;
+    //    public int endLevel;
+    //    public int experienceCapIncrease;
+    //}
 
     [Header("I-Frames")]
     public float invincibilityDuration;
     float invincibilityTimer;
     bool isInvincible;
 
-    public List<LevelRange> levelRanges;
+    //public List<LevelRange> levelRanges;
 
     InventoryManager inventory;
     public int weaponIndex;
@@ -161,11 +161,12 @@ public class PlayerStats : MonoBehaviour
         SpawnPassiveItem(firstPassiveItemTest);
         SpawnPassiveItem(secondPassiveItemTest);
     }
-
     private void Start()
     {
         //Initialize the experience cap as the first experience cap increase
-        experienceCap = levelRanges[0].experienceCapIncrease;
+        experience = 0;
+        experienceCapIncrease = 100;
+        experienceCap = 100;
         GameManager.instance.currentRecoveryDisplay.text = "Recovery: " + currentRecovery;
         GameManager.instance.currentHealtDisplay.text = "Health: " + currentHealth;
         GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed : " + currentProjectileSpeed;
@@ -200,7 +201,7 @@ public class PlayerStats : MonoBehaviour
     public void IncreaseExperience(int amount)
     {
         experience += amount;
-        if (experience <= experienceCap)
+        if (experience < experienceCap)
         {
             //xpbar.SetXp(experience);
             xpbar_player.SetXp(experience);
@@ -208,29 +209,34 @@ public class PlayerStats : MonoBehaviour
         LevelUpChecker();
     }
 
+    void updateExperienceCapIncrease()
+    {
+        // Calculate the xp cap increase using a non linear formula
+        experienceCapIncrease = Mathf.RoundToInt(experienceCapIncrease * Mathf.Pow(experienceMultiplier, Mathf.Sqrt(level)));
+    }
+
     void LevelUpChecker()
     {
         if (experience >= experienceCap)
         {
-            GameManager.instance.currentLevelDisplay.text = "" + level;
             level++;
+            GameManager.instance.currentLevelDisplay.text = "" + level;
             experience -= experienceCap;
-
+            updateExperienceCapIncrease();
+        
             //xpbar.SetXp(experience);
-            xpbar_player.SetXp(experience);
-            int experienceCapIncrease = 0;
-            foreach (LevelRange range in levelRanges)
-            {
-                if (level >= range.startLevel && level <= range.endLevel)
-                {
-                    experienceCapIncrease = range.experienceCapIncrease;
-                    break;
-                }
-            }
+            //foreach (LevelRange range in levelRanges)
+            //{
+            //    if (level >= range.startLevel && level <= range.endLevel)
+            //    {
+            //        experienceCapIncrease = range.experienceCapIncrease;
+            //        break;
+            //    }
+            //}
             experienceCap += experienceCapIncrease;
            // xpbar.SetMaxXp(experienceCap);
             xpbar_player.SetMaxXp(experienceCap);
-
+            xpbar_player.SetXp(experience);
         }
     }
     public void TakeDamage(float dmg)
