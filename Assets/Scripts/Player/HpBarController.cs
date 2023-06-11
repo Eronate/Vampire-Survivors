@@ -15,8 +15,6 @@ public class HpBarController : MonoBehaviour
     {
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
-        Debug.Log("HPP");
-
     }
     public void SetMaxHealth(float health)
     {

@@ -13,15 +13,17 @@ public class GameManager : MonoBehaviour
     {
         Gameplay,
         Paused,
-        GameOver
+        GameOver,
+        LevelUp
     }
     // Store the current state of the game;
     public GameState currentState;
-    public GameState previoudState;
+    public GameState previousState;
 
     [Header("Screens")]
     public GameObject pauseScreen;
     public GameObject resultScreen;
+    public GameObject levelUpScreen;
 
     [Header("Current Stat Display")]
     public Text currentHealtDisplay;
@@ -100,28 +102,40 @@ public class GameManager : MonoBehaviour
     {
         if (currentState != GameState.Paused)
         {
-            previoudState = currentState;
+            previousState = currentState;
 
             ChangeState(GameState.Paused);
             pauseScreen.SetActive(true);
             Time.timeScale = 0f; // stop the game
             Debug.Log("Games is paused");
         }
-
-
     }
     public void ResumeGame()
     {
         if (currentState == GameState.Paused)
         {
-            ChangeState(previoudState);
+            ChangeState(previousState);
             Time.timeScale = 1f;
             pauseScreen.SetActive(false);
             Debug.Log("Game is resumed");
         }
-
-
+        if(currentState == GameState.LevelUp)
+        {
+            ChangeState(GameState.Gameplay);
+            levelUpScreen.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
+
+    public void LevelUp()
+    {
+        Debug.Log("Level up");
+        ChangeState(GameState.LevelUp);
+        levelUpScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+
     void CheckForPauseAndResume()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -140,6 +154,7 @@ public class GameManager : MonoBehaviour
     {
         pauseScreen.SetActive(false);
         resultScreen.SetActive(false);
+        levelUpScreen.SetActive(false);
     }
     public void GameOver()
     {
