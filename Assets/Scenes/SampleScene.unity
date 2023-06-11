@@ -282,82 +282,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8183657}
   m_CullTransparentMesh: 1
---- !u!1 &29027712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 29027713}
-  - component: {fileID: 29027715}
-  - component: {fileID: 29027714}
-  m_Layer: 5
-  m_Name: Knife
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &29027713
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29027712}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1303374112}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095367, y: -80.2}
-  m_SizeDelta: {x: 74.054, y: 74.054}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &29027714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29027712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 2037609657, guid: 68f00c2ee8efa374e9e8e5e6f0a0e5a9, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &29027715
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29027712}
-  m_CullTransparentMesh: 1
 --- !u!1 &49322995
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,6 +4963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b77350dc830b384ba611c87b0862dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   currentState: 0
   previousState: 0
   pauseScreen: {fileID: 736117975}
@@ -6503,6 +6428,7 @@ GameObject:
   - component: {fileID: 1264046189}
   - component: {fileID: 1264046191}
   - component: {fileID: 1264046190}
+  - component: {fileID: 1264046192}
   m_Layer: 5
   m_Name: Garlic
   m_TagString: Untagged
@@ -6543,14 +6469,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7137255, g: 0.7137255, b: 0.7137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -964157318, guid: 68f00c2ee8efa374e9e8e5e6f0a0e5a9, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6568,6 +6494,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264046188}
   m_CullTransparentMesh: 1
+--- !u!114 &1264046192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264046188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e5f3f2d3d73934b9393a8cb733f8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: -964157318, guid: 68f00c2ee8efa374e9e8e5e6f0a0e5a9, type: 3}
+  - {fileID: 2037609657, guid: 68f00c2ee8efa374e9e8e5e6f0a0e5a9, type: 3}
 --- !u!1 &1303185558
 GameObject:
   m_ObjectHideFlags: 0
@@ -6636,7 +6577,6 @@ RectTransform:
   m_Children:
   - {fileID: 714391738}
   - {fileID: 1264046189}
-  - {fileID: 29027713}
   m_Father: {fileID: 502718548}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

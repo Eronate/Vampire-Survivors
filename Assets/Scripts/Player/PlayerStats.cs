@@ -146,6 +146,7 @@ public class PlayerStats : MonoBehaviour
     {
         characterData = CharacterSelector.GetData();
         CharacterSelector.instance.DestroySingleton();
+        
 
         inventory = GetComponent<InventoryManager>();
 
@@ -166,6 +167,7 @@ public class PlayerStats : MonoBehaviour
     {
         //Initialize the experience cap as the first experience cap increase
         experienceCap = levelRanges[0].experienceCapIncrease;
+        GameManager.instance.index = characterData.Index;
         GameManager.instance.currentRecoveryDisplay.text = "Recovery: " + currentRecovery;
         GameManager.instance.currentHealtDisplay.text = "Health: " + currentHealth;
         GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed : " + currentProjectileSpeed;

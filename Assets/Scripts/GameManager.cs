@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 {
     //Define the different states of the game
     public static GameManager instance;
+
+    public int index;
     public enum GameState
     {
         Gameplay,

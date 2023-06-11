@@ -7,7 +7,7 @@ using UnityEngine;
 public class CharacterScriptableObject : ScriptableObject
 {
     [SerializeField]
-    Sprite  icon;
+    Sprite icon;
     public Sprite Icon { get => icon; private set => icon = value; }
     [SerializeField]
     new string  name;
@@ -39,4 +39,7 @@ public class CharacterScriptableObject : ScriptableObject
     [SerializeField]
     float magnet;
     public float Magnet { get => magnet; private set => magnet = value;}
+    [SerializeField]
+    int index;
+    public int Index { get => index; private set => index = value; }
 }
