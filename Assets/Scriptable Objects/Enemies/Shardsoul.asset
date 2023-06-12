@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shardsoul
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  maxHealth: 10
+  maxHealth: 400
   damage: 10
