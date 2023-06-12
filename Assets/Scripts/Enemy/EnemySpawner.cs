@@ -14,6 +14,13 @@ public class EnemySpawner : MonoBehaviour
         public float spawnInterval; //The interval at which to spawn enemies
         public int spawnCount; //The number of enemies already spawned in this wave
     }
+    //0 = Bat
+    //1 = Red Bat
+    //2 = Shardsoul
+    //3 = Skeleton
+    //4 = EvilWizard
+    //5 = UndeadExecutioner
+    public List<GameObject> listOfEnemies;
 
     [System.Serializable]
     public class EnemyGroup
@@ -25,7 +32,8 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public List<Wave> waves; //A list of all the waves in the game
-    public int currentWaveCount; //The index of the current wave [list starts from 0]
+
+    public int currentWaveCount; //The index of the current wave [list starts from 0]   
 
     [Header("Spawner Attributes")]
     float spawnTimer; //Timer used to determine when to spawn the next enemy;
@@ -40,6 +48,7 @@ public class EnemySpawner : MonoBehaviour
     Transform player;
     void Start()
     {
+
         player = FindObjectOfType<PlayerStats>().transform;
         CalculateWaveQuota();
     }

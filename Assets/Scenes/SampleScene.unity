@@ -1361,14 +1361,9 @@ MonoBehaviour:
   experience: 0
   level: 1
   experienceCap: 0
+  experienceCapIncrease: 0
+  experienceMultiplier: 1.2
   invincibilityDuration: 0.5
-  levelRanges:
-  - startLevel: 1
-    endLevel: 3
-    experienceCapIncrease: 100
-  - startLevel: 4
-    endLevel: 5
-    experienceCapIncrease: 200
   weaponIndex: 0
   passiveItemIndex: 0
   secondWeaponTest: {fileID: 494941141917784224, guid: 34249f8682c863c4188db99b84adfd50, type: 3}
@@ -3927,7 +3922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3263114769507810703, guid: cb0d77ee9bcefa843853aa95afdd0541, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb0d77ee9bcefa843853aa95afdd0541, type: 3}
@@ -5437,6 +5432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1146710992}
   - component: {fileID: 1146710991}
+  - component: {fileID: 1146710993}
   m_Layer: 0
   m_Name: Enemy Spawner
   m_TagString: Untagged
@@ -5451,11 +5447,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146710990}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cde42e1f79c5b764e9e2b52f4cb8e56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listOfEnemies:
+  - {fileID: 529950346109077032, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
+  - {fileID: 529950346109077032, guid: b6ba52147431abc4387bcd7db3ef60dc, type: 3}
+  - {fileID: 6849200936561296291, guid: f6f810d8b41035647acda505ed350b9c, type: 3}
+  - {fileID: 6458253776177078782, guid: a39b5e3dff952954f9c640f811549b59, type: 3}
+  - {fileID: 8210555308760597936, guid: 2c41ff7286c4d544c97e0c6838b21992, type: 3}
+  - {fileID: 3263114769507810703, guid: cb0d77ee9bcefa843853aa95afdd0541, type: 3}
   waves:
   - waveName: Wave 1
     enemyGroups:
@@ -5518,6 +5521,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146710993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146710990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbc22a5b9df69148ae4be262418c3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfEnemies:
+  - {fileID: 529950346109077032, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
+  - {fileID: 529950346109077032, guid: b6ba52147431abc4387bcd7db3ef60dc, type: 3}
+  - {fileID: 6849200936561296291, guid: f6f810d8b41035647acda505ed350b9c, type: 3}
+  - {fileID: 6458253776177078782, guid: a39b5e3dff952954f9c640f811549b59, type: 3}
+  - {fileID: 8210555308760597936, guid: 2c41ff7286c4d544c97e0c6838b21992, type: 3}
+  - {fileID: 3263114769507810703, guid: cb0d77ee9bcefa843853aa95afdd0541, type: 3}
+  waves: []
+  currentWaveCount: 0
+  enemiesAlive: 0
+  maxEnemiesAllowed: 50
+  maxEnemiesReached: 0
+  waveInterval: 0
+  relativeSpawnPoints:
+  - {fileID: 2138756347}
+  - {fileID: 618864727}
+  - {fileID: 662639883}
+  - {fileID: 389635765}
+  - {fileID: 1255285251}
+  - {fileID: 1504401038}
+  - {fileID: 1552785271}
+  - {fileID: 619653952}
+  - {fileID: 747109824}
+  - {fileID: 1550530828}
+  - {fileID: 852056703}
+  probabilitiesOfEnemySpawn:
+  - 0.7
+  - 0.12
+  - 0.12
+  - 0.06
+  probabilityOfIdenticalWave: 0.3
+  enemyCountCoefficient: 1.3
+  maxQuota: 0
 --- !u!1 &1186337298
 GameObject:
   m_ObjectHideFlags: 0
@@ -6911,7 +6959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6458253776177078782, guid: a39b5e3dff952954f9c640f811549b59, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39b5e3dff952954f9c640f811549b59, type: 3}
@@ -8994,7 +9042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 529950346109077032, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 529950346109077037, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
       propertyPath: m_RootOrder
@@ -9107,7 +9155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6849200936561296291, guid: f6f810d8b41035647acda505ed350b9c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f810d8b41035647acda505ed350b9c, type: 3}
@@ -9172,7 +9220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8210555308760597936, guid: 2c41ff7286c4d544c97e0c6838b21992, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c41ff7286c4d544c97e0c6838b21992, type: 3}
