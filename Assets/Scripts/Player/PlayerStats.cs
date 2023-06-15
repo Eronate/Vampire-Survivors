@@ -225,7 +225,10 @@ public class PlayerStats : MonoBehaviour
             GameManager.instance.currentLevelDisplay.text = "" + level;
             experience -= experienceCap;
             updateExperienceCapIncrease();
+            experienceCap += experienceCapIncrease;
+            xpbar_player.SetMaxXp(experienceCap);
             xpbar_player.SetXp(experience);
+            GameManager.instance.LevelUp();
         }
     }
     public void TakeDamage(float dmg)
