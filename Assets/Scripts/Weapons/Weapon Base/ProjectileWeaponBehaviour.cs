@@ -55,11 +55,17 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         }
         else if (dirx > 0 && diry > 0)  //right up
         {
-            rotation.z = -90f;
+            scale.x = scale.x * -1;
+            scale.y = scale.y * -1;
+            rotation.z = 0f;
+           
         }
         else if (dirx > 0 && diry < 0)  //right down
         {
+            scale.x = scale.x * -1;
+            scale.y = scale.y * -1;
             rotation.z = -90f;
+        
         }
         else if (dirx > 0 && diry < 0)  //right down
         {
@@ -67,15 +73,13 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         }
         else if (dirx < 0 && diry > 0)  //right down
         {
-            scale.x = scale.x * -1;
-            scale.y= scale.y * -1;
             rotation.z = -90f;
         }
         else if (dirx < 0 && diry < 0)  //right down
         {
-            scale.x = scale.x * -1;
             scale.y = scale.y * -1;
-            rotation.z = 0f;
+            rotation.z = 90f;
+
         }
 
 
