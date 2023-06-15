@@ -28,6 +28,7 @@ public class MeleeEnemyStats : EnemyStats
         if(collision.gameObject.CompareTag("Player"))
         {
             isEnemyInContact = true;
+            collision.gameObject.GetComponent<PlayerStats>().TakeDamage(currentDamage);
             animator.SetTrigger(attackTriggerHash);
             collider = collision;
         }

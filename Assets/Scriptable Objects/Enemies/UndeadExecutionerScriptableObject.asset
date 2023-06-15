@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: UndeadExecutionerScriptableObject
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  maxHealth: 500
+  maxHealth: 60
   damage: 20
-  spellFrequency: 0
-  healFrequency: 0
+  spellFrequency: 3
+  healFrequency: 2
   minTimeSinceLastAction: 6.5
   maxTimeSinceLastAction: 9

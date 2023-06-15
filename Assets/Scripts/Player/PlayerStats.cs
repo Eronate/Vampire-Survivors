@@ -145,6 +145,8 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         characterData = CharacterSelector.GetData();
+        GetComponent<Animator>().runtimeAnimatorController = CharacterSelector.GetAnimator();
+        GetComponent<SpriteRenderer>().sprite = CharacterSelector.GetSprite();
         CharacterSelector.instance.DestroySingleton();
         
 
@@ -235,6 +237,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (!isInvincible)
         {
+            GetComponent<PlayerAnimator>().TriggerHit();
             CurrentHealth -= dmg;
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;

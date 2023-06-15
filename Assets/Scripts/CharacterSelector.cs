@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class CharacterSelector : MonoBehaviour
 {
     public static CharacterSelector instance;
     public CharacterScriptableObject characterData;
+    public Sprite characterSprite;
+    public AnimatorController characterAnimatorController;
     void Awake()
     {
         if (instance == null)
@@ -24,9 +27,25 @@ public class CharacterSelector : MonoBehaviour
     {
         return instance.characterData; 
     }  
+    public static Sprite GetSprite()
+    {
+        return instance.characterSprite;
+    }
+    public static AnimatorController GetAnimator()
+    {
+        return instance.characterAnimatorController;
+    }
     public void SelectCharacter(CharacterScriptableObject character)
     {
         characterData = character;
+    }
+    public void SelectSprite(Sprite sprite)
+    {
+        characterSprite = sprite;
+    }
+    public void SelectAnimatorController(AnimatorController controller)
+    {
+        characterAnimatorController = controller;
     }
     public void DestroySingleton()
     {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EvilWizardScriptableObject
   m_EditorClassIdentifier: 
   moveSpeed: 3.5
-  maxHealth: 300
+  maxHealth: 40
   damage: 30
   baseAttackFrequency: 65
   specialAttackMultipler: 1.25

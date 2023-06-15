@@ -8,12 +8,14 @@ public class PlayerAnimator : MonoBehaviour
     Animator am;
     PlayerMovement pm;
     SpriteRenderer sr;
+    int hitTriggerHash;
 
     void Start()
     {
         am = GetComponent<Animator>();
         pm = GetComponent<PlayerMovement>();
         sr = GetComponent<SpriteRenderer>();
+        hitTriggerHash = Animator.StringToHash("Hit");
     }
 
     // Update is called once per frame
@@ -33,9 +35,13 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (pm.lastHorizontalVector < 0)
         {
-            sr.flipX = false;
+            sr.flipX = true;
         }
         else
-            sr.flipX = true;
+            sr.flipX = false;
+    }
+    public void TriggerHit()
+    {
+        am.SetTrigger(hitTriggerHash);
     }
 }

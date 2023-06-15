@@ -55,7 +55,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         }
         else if (dirx > 0 && diry > 0)  //right up
         {
-            rotation.z = 0f;
+            rotation.z = -90f;
         }
         else if (dirx > 0 && diry < 0)  //right down
         {
