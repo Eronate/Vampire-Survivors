@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SpinachPassiveItem : PassiveItem
 {
-    protected override void ApplyModifier()
+    public override void LevelUp()
     {
-        player.CurrentMight *= 1 + passiveItemData.Multipler / 100f;
+        base.LevelUp();
+        player.CurrentMight = 2 - 1 / Mathf.Pow(passiveItemData.Level, 4 / 5);
     }
 }

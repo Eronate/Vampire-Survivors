@@ -32,16 +32,7 @@ public class InventoryManager : MonoBehaviour
         if(weaponSlots.Count > slotIndex)
         {
             WeaponController weapon = weaponSlots[slotIndex];
-            if(!weapon.weaponData.NextLevelPrefab)
-            {
-                Debug.LogError("NO NEXT LEVEL FOR " + weapon.name);
-                return;
-            }
-            GameObject upgradedWeapon = Instantiate(weapon.weaponData.NextLevelPrefab, transform.position, Quaternion.identity);
-            upgradedWeapon.transform.SetParent(transform);
-            AddWeapon(slotIndex, upgradedWeapon.GetComponent<WeaponController>());
-            Destroy(weapon.gameObject);
-            weaponLevels[slotIndex] = upgradedWeapon.GetComponent<WeaponController>().weaponData.Level;
+            weapon.LevelUp();
             GameManager.instance.ResumeGame();
         }
     }
@@ -50,16 +41,7 @@ public class InventoryManager : MonoBehaviour
         if (passiveItemSlots.Count > slotIndex)
         {
             PassiveItem passiveItem = passiveItemSlots[slotIndex];
-            if (!passiveItem.passiveItemData.NextLevelPrefab)
-            {
-                Debug.LogError("NO NEXT LEVEL FOR " + passiveItem.name);
-                return;
-            }
-            GameObject upgradedPassiveItem = Instantiate(passiveItem.passiveItemData.NextLevelPrefab, transform.position, Quaternion.identity);
-            upgradedPassiveItem.transform.SetParent(transform);
-            AddPassiveItem(slotIndex, upgradedPassiveItem.GetComponent<PassiveItem>());
-            Destroy(passiveItem.gameObject);
-            passiveItemLevels[slotIndex] = upgradedPassiveItem.GetComponent<PassiveItem>().passiveItemData.Level;
+            passiveItem.LevelUp();
             GameManager.instance.ResumeGame();
         }
     }

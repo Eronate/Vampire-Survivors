@@ -18,4 +18,9 @@ public class BookController : WeaponController
         spawnedBook.transform.position = transform.position + new Vector3(3f, 3f, 0);
         spawnedBook.transform.parent = transform;
     }
+    public override void LevelUp()
+    {
+        base.LevelUp();
+        weaponData.CooldownDuration = 4 + 3 / Mathf.Sqrt(weaponData.Level);
+    }
 }

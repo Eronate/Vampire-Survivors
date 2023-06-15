@@ -6,13 +6,12 @@ public class PassiveItem : MonoBehaviour
 {
     protected PlayerStats player;
     public PassiveItemScriptableObject passiveItemData;
-    protected virtual void ApplyModifier()
+    public virtual void LevelUp()
     {
-
+        passiveItemData.Level += 1;
     }
     void Start()
     {
         player = FindAnyObjectByType<PlayerStats>();
-        ApplyModifier();
     }
 }

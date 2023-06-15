@@ -18,6 +18,12 @@ public class KnifeController : WeaponController
         spawnedKnife.transform.position = transform.position;
         spawnedKnife.GetComponent<KnifeBehaviour>().DirectionChecker(pm.lastMovedVector); 
     }
-
+    public override void LevelUp()
+    {
+        base.LevelUp();
+        weaponData.Pierce = weaponData.Level;
+        weaponData.CooldownDuration = (float)(0.5 + 1.5 / Mathf.Sqrt(weaponData.Level));
+        Debug.Log(weaponData.Pierce);
+    }
 
 }

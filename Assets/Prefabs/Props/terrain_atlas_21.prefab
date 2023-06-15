@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -673996759
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1795673295, guid: 17328afc78042dd44b87893ba8e565cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -161,12 +161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drops:
-  - name: Bat
-    itemPrefab: {fileID: 529950346109077032, guid: 17be6ea1651cea24ea5518b76c46db86, type: 3}
-    dropRate: 40
-  - name: Red Bat
-    itemPrefab: {fileID: 529950346109077032, guid: b6ba52147431abc4387bcd7db3ef60dc, type: 3}
-    dropRate: 10
   - name: Red Potion
     itemPrefab: {fileID: 2714502065291146524, guid: eac621420b99c0f4a90a0a7f7d4b2b63, type: 3}
-    dropRate: 50
+    dropRate: 80

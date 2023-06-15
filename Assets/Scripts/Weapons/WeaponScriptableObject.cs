@@ -21,17 +21,14 @@ public class WeaponScriptableObject : ScriptableObject
     public float Speed { get => speed; private set => speed = value; }
     [SerializeField]
     float  cooldownDuration;
-    public float CooldownDuration { get => cooldownDuration; private set => cooldownDuration = value; }
+    public float CooldownDuration { get => cooldownDuration; set => cooldownDuration = value; }
     [SerializeField]
     int pierce;
-    public int Pierce { get => pierce; private set => pierce = value; }
+    public int Pierce { get => pierce; set => pierce = value; }
 
     [SerializeField]
     int level;
-    public int Level { get => level; private set => level = value; }
-    [SerializeField]
-    GameObject nextLevelPrefab;
-    public GameObject NextLevelPrefab { get => nextLevelPrefab; private set => nextLevelPrefab = value; }
+    public int Level { get => level; set => level = value; }
 
     [SerializeField]
     Sprite icon;

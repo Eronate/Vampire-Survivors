@@ -17,4 +17,9 @@ public class GarlicContorller : WeaponController
         spawnedGarlic.transform.position= transform.position;
         spawnedGarlic.transform.parent = transform;
     }
+    public override void LevelUp()
+    {
+        base.LevelUp();
+        weaponData.CooldownDuration = 2 + 1 / weaponData.Level;
+    }
 }

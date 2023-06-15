@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class WingsPassiveItem : PassiveItem
 {
-    protected override void ApplyModifier()
+    public override void LevelUp()
     {
-        player.CurrentMoveSpeed *= 1 + passiveItemData.Multipler / 100f;
+        base.LevelUp();
+        player.CurrentMoveSpeed = 6 - 1 / passiveItemData.Level;
     }
 }

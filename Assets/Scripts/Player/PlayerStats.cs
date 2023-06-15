@@ -214,7 +214,7 @@ public class PlayerStats : MonoBehaviour
     void updateExperienceCapIncrease()
     {
         // Calculate the xp cap increase using a non linear formula
-        experienceCapIncrease = Mathf.RoundToInt(experienceCapIncrease * Mathf.Pow(experienceMultiplier, Mathf.Sqrt(level)));
+        experienceCapIncrease = Mathf.RoundToInt(experienceCapIncrease * Mathf.Sqrt(Mathf.Pow(experienceMultiplier, Mathf.Sqrt(level))));
     }
 
     void LevelUpChecker()

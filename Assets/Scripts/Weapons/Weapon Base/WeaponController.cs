@@ -28,4 +28,8 @@ public class WeaponController : MonoBehaviour
     {
         currentCooldown = weaponData.CooldownDuration;
     }
+    public virtual void LevelUp()
+    {
+        weaponData.Level += 1;
+    }
 }
