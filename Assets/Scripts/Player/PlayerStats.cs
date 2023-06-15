@@ -146,6 +146,7 @@ public class PlayerStats : MonoBehaviour
     {
         characterData = CharacterSelector.GetData();
         CharacterSelector.instance.DestroySingleton();
+        
 
         inventory = GetComponent<InventoryManager>();
 
@@ -167,6 +168,7 @@ public class PlayerStats : MonoBehaviour
         experience = 0;
         experienceCapIncrease = 100;
         experienceCap = 100;
+        GameManager.instance.index = characterData.Index;
         GameManager.instance.currentRecoveryDisplay.text = "Recovery: " + currentRecovery;
         GameManager.instance.currentHealtDisplay.text = "Health: " + currentHealth;
         GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed : " + currentProjectileSpeed;
@@ -223,19 +225,6 @@ public class PlayerStats : MonoBehaviour
             GameManager.instance.currentLevelDisplay.text = "" + level;
             experience -= experienceCap;
             updateExperienceCapIncrease();
-        
-            //xpbar.SetXp(experience);
-            //foreach (LevelRange range in levelRanges)
-            //{
-            //    if (level >= range.startLevel && level <= range.endLevel)
-            //    {
-            //        experienceCapIncrease = range.experienceCapIncrease;
-            //        break;
-            //    }
-            //}
-            experienceCap += experienceCapIncrease;
-           // xpbar.SetMaxXp(experienceCap);
-            xpbar_player.SetMaxXp(experienceCap);
             xpbar_player.SetXp(experience);
         }
     }

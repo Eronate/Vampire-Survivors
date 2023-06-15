@@ -42,6 +42,7 @@ public class InventoryManager : MonoBehaviour
             AddWeapon(slotIndex, upgradedWeapon.GetComponent<WeaponController>());
             Destroy(weapon.gameObject);
             weaponLevels[slotIndex] = upgradedWeapon.GetComponent<WeaponController>().weaponData.Level;
+            GameManager.instance.ResumeGame();
         }
     }
     public void LevelUpPassiveItem(int slotIndex)
@@ -59,6 +60,7 @@ public class InventoryManager : MonoBehaviour
             AddPassiveItem(slotIndex, upgradedPassiveItem.GetComponent<PassiveItem>());
             Destroy(passiveItem.gameObject);
             passiveItemLevels[slotIndex] = upgradedPassiveItem.GetComponent<PassiveItem>().passiveItemData.Level;
+            GameManager.instance.ResumeGame();
         }
     }
 }
