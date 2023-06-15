@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Spinach Passive Item
   m_EditorClassIdentifier: 
   level: 3
-  icon: {fileID: -585985926, guid: 68f00c2ee8efa374e9e8e5e6f0a0e5a9, type: 3}
+  icon: {fileID: 21300000, guid: 77190e6d678e5e442b75263d28c11f58, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Wings Passive Item
   m_EditorClassIdentifier: 
   level: 18
-  icon: {fileID: -2113796776, guid: 68f00c2ee8efa374e9e8e5e6f0a0e5a9, type: 3}
+  icon: {fileID: 21300000, guid: 22704f8380e5a584fba5c99e04868dcd, type: 3}

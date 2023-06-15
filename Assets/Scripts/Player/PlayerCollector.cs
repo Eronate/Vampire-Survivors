@@ -34,7 +34,7 @@ public class PlayerCollector : MonoBehaviour
                 Vector2 forceDirection = (transform.position - col.transform.position).normalized;
                 rb.velocity = new Vector2(0, 0);
                 rb.AddForce(forceDirection * pullSpeed);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.02f);
             }
     }
 }
