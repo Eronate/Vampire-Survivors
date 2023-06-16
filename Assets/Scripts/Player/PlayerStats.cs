@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     CharacterScriptableObject characterData;
-
+    public GameObject SoundBearer;
     float currentHealth;
     float currentRecovery;
     float currentMoveSpeed;
@@ -224,6 +224,7 @@ public class PlayerStats : MonoBehaviour
         if (experience >= experienceCap)
         {
             level++;
+            SoundBearer.GetComponent<AudioSource>().Play();
             GameManager.instance.currentLevelDisplay.text = "" + level;
             experience -= experienceCap;
             updateExperienceCapIncrease();
