@@ -42,5 +42,8 @@ public class FaderScript : MonoBehaviour
     {
         animator.SetTrigger("FadeIn");
     }
-
+    public void ChangeGameState(GameManager.GameState gamestate)
+    {
+        GameManager.instance.currentState = gamestate;
+    }
 }
