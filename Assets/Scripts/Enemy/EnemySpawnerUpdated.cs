@@ -73,7 +73,7 @@ public class EnemySpawnerUpdated : MonoBehaviour
     void Update()
     {
         waveTimer += Time.deltaTime;
-        if (waveTimer >= waveInterval)
+        if (waveTimer >= waveInterval && waves[currentWaveCount].spawnCount >= waves[currentWaveCount].waveQuota)
         {
             BeginNextWave();
             waveTimer = 0f;
