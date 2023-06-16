@@ -7,6 +7,6 @@ public class SpinachPassiveItem : PassiveItem
     public override void LevelUp()
     {
         base.LevelUp();
-        player.CurrentMight = 2 - 1 / Mathf.Pow(passiveItemData.Level, 4 / 5);
+        player.CurrentMight = 2 - 1 / Mathf.Pow(level, 4 / 5);
     }
 }

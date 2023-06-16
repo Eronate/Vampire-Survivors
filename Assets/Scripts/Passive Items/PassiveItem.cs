@@ -6,9 +6,14 @@ public class PassiveItem : MonoBehaviour
 {
     protected PlayerStats player;
     public PassiveItemScriptableObject passiveItemData;
+    protected int level;
+    private void Awake()
+    {
+        level = passiveItemData.Level;
+    }
     public virtual void LevelUp()
     {
-        passiveItemData.Level += 1;
+        level += 1;
     }
     void Start()
     {

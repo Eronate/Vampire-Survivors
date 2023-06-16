@@ -20,6 +20,6 @@ public class GarlicContorller : WeaponController
     public override void LevelUp()
     {
         base.LevelUp();
-        weaponData.CooldownDuration = 2 + 1 / weaponData.Level;
+        currentCooldown = 2 + 1 / currentLevel;
     }
 }

@@ -21,9 +21,9 @@ public class KnifeController : WeaponController
     public override void LevelUp()
     {
         base.LevelUp();
-        weaponData.Pierce = weaponData.Level;
-        weaponData.CooldownDuration = (float)(0.5 + 1.5 / Mathf.Sqrt(weaponData.Level));
-        Debug.Log(weaponData.Pierce);
+        currentPierce = currentLevel;
+        currentCooldown = (float)(0.5 + 1.5 / Mathf.Sqrt(currentLevel));
+        // Debug.Log(weaponData.Pierce);
     }
 
 }

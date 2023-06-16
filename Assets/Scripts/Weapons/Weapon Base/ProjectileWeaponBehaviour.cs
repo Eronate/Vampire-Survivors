@@ -13,6 +13,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     protected float currentSpeed;
     protected float currentCooldownDuration;
     protected int currentPierce;
+    protected int currentLevel;
 
     void Awake()
     {

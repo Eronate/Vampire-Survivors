@@ -14,6 +14,7 @@ public class MeleeWeaponBehaviour : MonoBehaviour
 
      void Awake()
     {
+        weaponData = weaponData;
         currentDamage = weaponData.Damage;
         currentSpeed = weaponData.Speed;
         currentCooldownDuration= weaponData.CooldownDuration; 

@@ -7,8 +7,17 @@ public class WeaponController : MonoBehaviour
 {
     [Header("Weapon Stats")]
     public WeaponScriptableObject weaponData;
-    float currentCooldown;
+    protected float currentCooldown;
+    protected int currentPierce;
+    protected int currentLevel;
+
     protected PlayerMovement pm;
+    private void Awake()
+    {
+        currentLevel = weaponData.Level;
+        currentPierce = weaponData.Pierce;
+        currentCooldown = weaponData.CooldownDuration;
+    }
     protected virtual void Start()
     {
         pm = FindObjectOfType<PlayerMovement>();
@@ -30,6 +39,6 @@ public class WeaponController : MonoBehaviour
     }
     public virtual void LevelUp()
     {
-        weaponData.Level += 1;
+        currentLevel += 1;
     }
 }

@@ -21,6 +21,6 @@ public class BookController : WeaponController
     public override void LevelUp()
     {
         base.LevelUp();
-        weaponData.CooldownDuration = 4 + 3 / Mathf.Sqrt(weaponData.Level);
+        currentCooldown = 4 + 3 / Mathf.Sqrt(currentLevel);
     }
 }
