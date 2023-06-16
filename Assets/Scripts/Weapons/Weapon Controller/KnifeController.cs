@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KnifeController : WeaponController
@@ -16,7 +17,13 @@ public class KnifeController : WeaponController
         base.Attack();
         GameObject spawnedKnife = Instantiate(weaponData.Prefab);
         spawnedKnife.transform.position = transform.position;
-        spawnedKnife.GetComponent<KnifeBehaviour>().DirectionChecker(pm.lastMovedVector); 
+        KnifeBehaviour spawnedKnifeBehaviour = spawnedKnife.GetComponent<KnifeBehaviour>();
+        spawnedKnifeBehaviour.DirectionChecker(pm.lastMovedVector);
+        spawnedKnifeBehaviour.currentDamage = weaponData.Damage;
+        spawnedKnifeBehaviour.currentLevel = currentLevel;
+        spawnedKnifeBehaviour.currentPierce = currentPierce;
+        spawnedKnifeBehaviour.currentSpeed = weaponData.Speed;
+        spawnedKnifeBehaviour.currentCooldownDuration = currentCooldown;
     }
     public override void LevelUp()
     {

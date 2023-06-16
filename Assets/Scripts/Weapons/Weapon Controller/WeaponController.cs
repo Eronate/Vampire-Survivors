@@ -21,7 +21,7 @@ public class WeaponController : MonoBehaviour
     protected virtual void Start()
     {
         pm = FindObjectOfType<PlayerMovement>();
-        currentCooldown = weaponData.CooldownDuration;
+        // currentCooldown = weaponData.CooldownDuration;
     }
 
     // Update is called once per frame

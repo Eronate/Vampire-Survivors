@@ -14,11 +14,16 @@ public class GarlicController : WeaponController
     {
         base.Attack();
         GameObject spawnedGarlic = Instantiate(weaponData.Prefab);
-        spawnedGarlic.transform.localScale = (spawnedGarlic.transform.localScale + new Vector3(Mathf.Atan(weaponData.Level), Mathf.Atan(weaponData.Level), Mathf.Atan(weaponData.Level)));
+        spawnedGarlic.transform.localScale = (spawnedGarlic.transform.localScale + new Vector3(Mathf.Atan(currentLevel), Mathf.Atan(currentLevel), 0));
         Vector3 scaleMultiplier = new Vector3(0.27f, 0.27f, 0.27f);
         spawnedGarlic.transform.localScale = Vector3.Scale(spawnedGarlic.transform.localScale, scaleMultiplier);
         spawnedGarlic.transform.position= transform.position;
         spawnedGarlic.transform.parent = transform;
+        GarlicBehaviour spawnedGarlicBehaviour = spawnedGarlic.GetComponent<GarlicBehaviour>();
+        spawnedGarlicBehaviour.currentDamage = weaponData.Damage;
+        spawnedGarlicBehaviour.currentSpeed = weaponData.Speed;
+        spawnedGarlicBehaviour.currentPierce = currentPierce;
+        spawnedGarlicBehaviour.currentCooldownDuration = currentCooldown;
     }
     public override void LevelUp()
     {

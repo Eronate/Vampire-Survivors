@@ -9,19 +9,16 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     public float destroyAfterSeconds;
 
     // Current stats
-    protected float currentDamage;
-    protected float currentSpeed;
-    protected float currentCooldownDuration;
-    protected int currentPierce;
-    protected int currentLevel;
-
-    void Awake()
-    {
-        currentDamage = weaponData.Damage;
-        currentSpeed = weaponData.Speed;
-        currentCooldownDuration = weaponData.CooldownDuration;
-        currentPierce = weaponData.Pierce;
-    }
+    [HideInInspector]
+    public float currentDamage;
+    [HideInInspector]
+    public float currentSpeed;
+    [HideInInspector]
+    public float currentCooldownDuration;
+    [HideInInspector]
+    public int currentPierce;
+    [HideInInspector]
+    public int currentLevel;
 
     public float GetCurrentDamage()
     {
