@@ -17,5 +17,5 @@ MonoBehaviour:
   speed: 0
   cooldownDuration: 2
   pierce: 0
-  level: 15
+  level: 1
   icon: {fileID: 21300000, guid: 076a599016faf7947a69a186538c0059, type: 3}
