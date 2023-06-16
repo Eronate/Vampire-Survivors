@@ -14,7 +14,7 @@ public class EnemyStats : MonoBehaviour
     public float currentDamage;
 
     public float despawnDistance = 20f;
-    protected bool isEnemyInContact = false;
+    public bool isEnemyInContact = false;
     Transform player;
     protected Collider2D collider;
     protected virtual void Awake()
