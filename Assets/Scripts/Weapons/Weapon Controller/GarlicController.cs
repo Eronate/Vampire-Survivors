@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GarlicContorller : WeaponController
+public class GarlicController : WeaponController
 {
     protected override void Start()
     {
