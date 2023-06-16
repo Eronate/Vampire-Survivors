@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
 
     public void LevelUp()
     {
-        Debug.Log("Level up");
+        // Debug.Log("Level up");
         ChangeState(GameState.LevelUp);
         levelUpScreen.SetActive(true);
         Time.timeScale = 0f;

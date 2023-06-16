@@ -62,7 +62,7 @@ public class PlayerStats : MonoBehaviour
                 {
                     GameManager.instance.currentMoveSpeedDisplay.text = "MovementSpeed: " + currentMoveSpeed;
                 }
-                Debug.Log("Movemet speed has been changed");
+                // Debug.Log("Movemet speed has been changed");
             }
         }
     }

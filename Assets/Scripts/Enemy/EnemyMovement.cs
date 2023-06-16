@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         // EnemyStats stats = GetComponent<EnemyStats>();
-        if(stats.currentHealth > 0)
+        if(stats.currentHealth > 0 && GetComponent<EnemyStats>().isEnemyInContact == false)
         {
             moveDir = transform.position - player.transform.position;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, stats.currentMoveSpeed * Time.deltaTime);
