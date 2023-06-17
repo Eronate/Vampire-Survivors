@@ -5,7 +5,7 @@ with the intention of reaching as high a level as possible. The difficulty spike
 and randomized enemies so no playthrough is the same.
 
 ### Demo:
-[![IMAGE ALT TEXT HERE](https://github.com/Eronate/Vampire-Survivors/assets/99949441/3c26f604-8e4f-43ca-a74b-78ca703daa10)]([https://www.youtube.com/watch?v=ntV570WS-AY](https://youtu.be/ntV570WS-AY))
+[![IMAGE ALT TEXT HERE](https://github.com/Eronate/Vampire-Survivors/assets/99949441/3c26f604-8e4f-43ca-a74b-78ca703daa10)](https://www.youtube.com/watch?v=ntV570WS-AY)
 
 ## User stories:
 As an user, I:
