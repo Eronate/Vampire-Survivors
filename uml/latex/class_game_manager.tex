@@ -1,0 +1,320 @@
+\doxysection{Game\+Manager Class Reference}
+\label{class_game_manager}\index{GameManager@{GameManager}}
+Inheritance diagram for Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ Game\+State} \{ \textbf{ Gameplay}
+, \textbf{ Paused}
+, \textbf{ Game\+Over}
+, \textbf{ Level\+Up}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Start} ()
+\item 
+void \textbf{ Change\+State} (\textbf{ Game\+State} new\+State)
+\item 
+void \textbf{ Pause\+Game} ()
+\item 
+void \textbf{ Resume\+Game} ()
+\item 
+void \textbf{ Level\+Up} ()
+\item 
+void \textbf{ Game\+Over} ()
+\item 
+void \textbf{ Assign\+Chosen\+Character\+UI} (\textbf{ Character\+Scriptable\+Object} chosen\+Character\+Data)
+\item 
+void \textbf{ Assign\+Level\+Reached\+UI} (int levell)
+\item 
+void \textbf{ Assign\+Time\+Survived} ()
+\item 
+void \textbf{ Assign\+Chosen\+Weapon\+And\+Passive\+Item\+UI} (List$<$ Image $>$ chosen\+Weapon\+Data, List$<$ Image $>$ chosen\+Passive\+Item\+Data)
+\item 
+Game\+Object \textbf{ get\+Result\+Screen} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ index}
+\item 
+\textbf{ Game\+State} \textbf{ current\+State}
+\item 
+\textbf{ Game\+State} \textbf{ previous\+State}
+\item 
+Game\+Object \textbf{ pause\+Screen}
+\item 
+Game\+Object \textbf{ result\+Screen}
+\item 
+Game\+Object \textbf{ level\+Up\+Screen}
+\item 
+Text \textbf{ current\+Healt\+Display}
+\item 
+Text \textbf{ current\+Recovery\+Display}
+\item 
+Text \textbf{ current\+Move\+Speed\+Display}
+\item 
+Text \textbf{ current\+Might\+Display}
+\item 
+Text \textbf{ current\+Projectile\+Speed\+Display}
+\item 
+Text \textbf{ current\+Magnet\+Display}
+\item 
+Text \textbf{ current\+Level\+Display}
+\item 
+Image \textbf{ chosen\+Character\+Image}
+\item 
+Text \textbf{ chosen\+Character\+Name}
+\item 
+Text \textbf{ level\+Reached\+Display}
+\item 
+Text \textbf{ time\+Survived\+Display}
+\item 
+List$<$ Image $>$ \textbf{ chosen\+Weapons\+UI} = new List$<$Image$>$(6)
+\item 
+List$<$ Image $>$ \textbf{ chosen\+Passive\+UI} = new List$<$Image$>$(6)
+\item 
+bool \textbf{ is\+Over} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Game\+Manager} \textbf{ instance}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\label{class_game_manager_a809dec58b5681fc1ebcc22eb428a914c} 
+\index{GameManager@{GameManager}!GameState@{GameState}}
+\index{GameState@{GameState}!GameManager@{GameManager}}
+\doxysubsubsection{GameState}
+{\footnotesize\ttfamily enum \textbf{ Game\+Manager.\+Game\+State}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gameplay@{Gameplay}!GameManager@{GameManager}}\index{GameManager@{GameManager}!Gameplay@{Gameplay}}}\label{class_game_manager_a809dec58b5681fc1ebcc22eb428a914ca6288740a1cd0de37312619df3b6ddcf3} 
+Gameplay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Paused@{Paused}!GameManager@{GameManager}}\index{GameManager@{GameManager}!Paused@{Paused}}}\label{class_game_manager_a809dec58b5681fc1ebcc22eb428a914cae99180abf47a8b3a856e0bcb2656990a} 
+Paused&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GameOver@{GameOver}!GameManager@{GameManager}}\index{GameManager@{GameManager}!GameOver@{GameOver}}}\label{class_game_manager_a809dec58b5681fc1ebcc22eb428a914ca8f347bc7cebca9fa6d97e70c6bc29eb3} 
+Game\+Over&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LevelUp@{LevelUp}!GameManager@{GameManager}}\index{GameManager@{GameManager}!LevelUp@{LevelUp}}}\label{class_game_manager_a809dec58b5681fc1ebcc22eb428a914cae7c8e9e1f90eadea8b03762d9e9215c7} 
+Level\+Up&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_game_manager_a5be9dd2d3b280066f9f875146ccc30b8} 
+\index{GameManager@{GameManager}!AssignChosenCharacterUI@{AssignChosenCharacterUI}}
+\index{AssignChosenCharacterUI@{AssignChosenCharacterUI}!GameManager@{GameManager}}
+\doxysubsubsection{AssignChosenCharacterUI()}
+{\footnotesize\ttfamily void Game\+Manager.\+Assign\+Chosen\+Character\+UI (\begin{DoxyParamCaption}\item[{\textbf{ Character\+Scriptable\+Object}}]{chosen\+Character\+Data }\end{DoxyParamCaption})}
+
+\label{class_game_manager_a056ef419c78bab4f53647810ec361995} 
+\index{GameManager@{GameManager}!AssignChosenWeaponAndPassiveItemUI@{AssignChosenWeaponAndPassiveItemUI}}
+\index{AssignChosenWeaponAndPassiveItemUI@{AssignChosenWeaponAndPassiveItemUI}!GameManager@{GameManager}}
+\doxysubsubsection{AssignChosenWeaponAndPassiveItemUI()}
+{\footnotesize\ttfamily void Game\+Manager.\+Assign\+Chosen\+Weapon\+And\+Passive\+Item\+UI (\begin{DoxyParamCaption}\item[{List$<$ Image $>$}]{chosen\+Weapon\+Data,  }\item[{List$<$ Image $>$}]{chosen\+Passive\+Item\+Data }\end{DoxyParamCaption})}
+
+\label{class_game_manager_a4d258c8c1bd21dbb11527248015c221b} 
+\index{GameManager@{GameManager}!AssignLevelReachedUI@{AssignLevelReachedUI}}
+\index{AssignLevelReachedUI@{AssignLevelReachedUI}!GameManager@{GameManager}}
+\doxysubsubsection{AssignLevelReachedUI()}
+{\footnotesize\ttfamily void Game\+Manager.\+Assign\+Level\+Reached\+UI (\begin{DoxyParamCaption}\item[{int}]{levell }\end{DoxyParamCaption})}
+
+\label{class_game_manager_ae41c014447808c3dde475beb630dacc4} 
+\index{GameManager@{GameManager}!AssignTimeSurvived@{AssignTimeSurvived}}
+\index{AssignTimeSurvived@{AssignTimeSurvived}!GameManager@{GameManager}}
+\doxysubsubsection{AssignTimeSurvived()}
+{\footnotesize\ttfamily void Game\+Manager.\+Assign\+Time\+Survived (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_game_manager_a0be9f101d2d4c69a15b9bd939ef4522b} 
+\index{GameManager@{GameManager}!ChangeState@{ChangeState}}
+\index{ChangeState@{ChangeState}!GameManager@{GameManager}}
+\doxysubsubsection{ChangeState()}
+{\footnotesize\ttfamily void Game\+Manager.\+Change\+State (\begin{DoxyParamCaption}\item[{\textbf{ Game\+State}}]{new\+State }\end{DoxyParamCaption})}
+
+\label{class_game_manager_a8d69157cb6b97eabeff2374d8e9adeaf} 
+\index{GameManager@{GameManager}!GameOver@{GameOver}}
+\index{GameOver@{GameOver}!GameManager@{GameManager}}
+\doxysubsubsection{GameOver()}
+{\footnotesize\ttfamily void Game\+Manager.\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_game_manager_a76454ed891b65f11b3e1072979e0b7af} 
+\index{GameManager@{GameManager}!getResultScreen@{getResultScreen}}
+\index{getResultScreen@{getResultScreen}!GameManager@{GameManager}}
+\doxysubsubsection{getResultScreen()}
+{\footnotesize\ttfamily Game\+Object Game\+Manager.\+get\+Result\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_game_manager_a8ff853af930a66e81a706fe7ead7dbaa} 
+\index{GameManager@{GameManager}!LevelUp@{LevelUp}}
+\index{LevelUp@{LevelUp}!GameManager@{GameManager}}
+\doxysubsubsection{LevelUp()}
+{\footnotesize\ttfamily void Game\+Manager.\+Level\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_game_manager_adb110a6ef474e4ac7901176c97a859ab} 
+\index{GameManager@{GameManager}!PauseGame@{PauseGame}}
+\index{PauseGame@{PauseGame}!GameManager@{GameManager}}
+\doxysubsubsection{PauseGame()}
+{\footnotesize\ttfamily void Game\+Manager.\+Pause\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_game_manager_a8422293216f2fc5791b1ac9667f88a40} 
+\index{GameManager@{GameManager}!ResumeGame@{ResumeGame}}
+\index{ResumeGame@{ResumeGame}!GameManager@{GameManager}}
+\doxysubsubsection{ResumeGame()}
+{\footnotesize\ttfamily void Game\+Manager.\+Resume\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_game_manager_a5ccfacd027ad08eeb4ff1f25a7f59c98} 
+\index{GameManager@{GameManager}!Start@{Start}}
+\index{Start@{Start}!GameManager@{GameManager}}
+\doxysubsubsection{Start()}
+{\footnotesize\ttfamily void Game\+Manager.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\label{class_game_manager_a57fb8bc84fb0590649f90e4cd9e9b166} 
+\index{GameManager@{GameManager}!chosenCharacterImage@{chosenCharacterImage}}
+\index{chosenCharacterImage@{chosenCharacterImage}!GameManager@{GameManager}}
+\doxysubsubsection{chosenCharacterImage}
+{\footnotesize\ttfamily Image Game\+Manager.\+chosen\+Character\+Image}
+
+\label{class_game_manager_a90a94b01295786f11bd7ae841e6767e5} 
+\index{GameManager@{GameManager}!chosenCharacterName@{chosenCharacterName}}
+\index{chosenCharacterName@{chosenCharacterName}!GameManager@{GameManager}}
+\doxysubsubsection{chosenCharacterName}
+{\footnotesize\ttfamily Text Game\+Manager.\+chosen\+Character\+Name}
+
+\label{class_game_manager_aef6ab4f83d566a182b1a4fd3cd71cf6e} 
+\index{GameManager@{GameManager}!chosenPassiveUI@{chosenPassiveUI}}
+\index{chosenPassiveUI@{chosenPassiveUI}!GameManager@{GameManager}}
+\doxysubsubsection{chosenPassiveUI}
+{\footnotesize\ttfamily List$<$Image$>$ Game\+Manager.\+chosen\+Passive\+UI = new List$<$Image$>$(6)}
+
+\label{class_game_manager_a59b23bfd58940d60f0f59644cba49bc4} 
+\index{GameManager@{GameManager}!chosenWeaponsUI@{chosenWeaponsUI}}
+\index{chosenWeaponsUI@{chosenWeaponsUI}!GameManager@{GameManager}}
+\doxysubsubsection{chosenWeaponsUI}
+{\footnotesize\ttfamily List$<$Image$>$ Game\+Manager.\+chosen\+Weapons\+UI = new List$<$Image$>$(6)}
+
+\label{class_game_manager_a0efc2dd3981f555ab305ec22540110f5} 
+\index{GameManager@{GameManager}!currentHealtDisplay@{currentHealtDisplay}}
+\index{currentHealtDisplay@{currentHealtDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{currentHealtDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+current\+Healt\+Display}
+
+\label{class_game_manager_acd28db76c8ef9e82d9c6f6ea15fa9940} 
+\index{GameManager@{GameManager}!currentLevelDisplay@{currentLevelDisplay}}
+\index{currentLevelDisplay@{currentLevelDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{currentLevelDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+current\+Level\+Display}
+
+\label{class_game_manager_a634591d22a94f43f3878ea00235433ee} 
+\index{GameManager@{GameManager}!currentMagnetDisplay@{currentMagnetDisplay}}
+\index{currentMagnetDisplay@{currentMagnetDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{currentMagnetDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+current\+Magnet\+Display}
+
+\label{class_game_manager_a2a00dd28e6c68d3cef59fcf629b0f3d5} 
+\index{GameManager@{GameManager}!currentMightDisplay@{currentMightDisplay}}
+\index{currentMightDisplay@{currentMightDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{currentMightDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+current\+Might\+Display}
+
+\label{class_game_manager_a936bcf643f2d6b624aedb364ecc1b1ab} 
+\index{GameManager@{GameManager}!currentMoveSpeedDisplay@{currentMoveSpeedDisplay}}
+\index{currentMoveSpeedDisplay@{currentMoveSpeedDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{currentMoveSpeedDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+current\+Move\+Speed\+Display}
+
+\label{class_game_manager_a032d3cdcfb6d578acc8c2374f5536bfc} 
+\index{GameManager@{GameManager}!currentProjectileSpeedDisplay@{currentProjectileSpeedDisplay}}
+\index{currentProjectileSpeedDisplay@{currentProjectileSpeedDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{currentProjectileSpeedDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+current\+Projectile\+Speed\+Display}
+
+\label{class_game_manager_a0198761af78fc78a3a201c7be908308a} 
+\index{GameManager@{GameManager}!currentRecoveryDisplay@{currentRecoveryDisplay}}
+\index{currentRecoveryDisplay@{currentRecoveryDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{currentRecoveryDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+current\+Recovery\+Display}
+
+\label{class_game_manager_ade12d70728f881d2a0745a6df8bb6f4c} 
+\index{GameManager@{GameManager}!currentState@{currentState}}
+\index{currentState@{currentState}!GameManager@{GameManager}}
+\doxysubsubsection{currentState}
+{\footnotesize\ttfamily \textbf{ Game\+State} Game\+Manager.\+current\+State}
+
+\label{class_game_manager_ac09c5bca2a65f16adf27270b472ff1cc} 
+\index{GameManager@{GameManager}!index@{index}}
+\index{index@{index}!GameManager@{GameManager}}
+\doxysubsubsection{index}
+{\footnotesize\ttfamily int Game\+Manager.\+index}
+
+\label{class_game_manager_a7666e8468dac197b9eb32dd32128524f} 
+\index{GameManager@{GameManager}!instance@{instance}}
+\index{instance@{instance}!GameManager@{GameManager}}
+\doxysubsubsection{instance}
+{\footnotesize\ttfamily \textbf{ Game\+Manager} Game\+Manager.\+instance\hspace{0.3cm}{\ttfamily [static]}}
+
+\label{class_game_manager_a7447341baac3f6f96e6c2575c7a262eb} 
+\index{GameManager@{GameManager}!isOver@{isOver}}
+\index{isOver@{isOver}!GameManager@{GameManager}}
+\doxysubsubsection{isOver}
+{\footnotesize\ttfamily bool Game\+Manager.\+is\+Over = false}
+
+\label{class_game_manager_a13e033f3a9eec56252d695b660b2a432} 
+\index{GameManager@{GameManager}!levelReachedDisplay@{levelReachedDisplay}}
+\index{levelReachedDisplay@{levelReachedDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{levelReachedDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+level\+Reached\+Display}
+
+\label{class_game_manager_ad8207e9e363293a670ccff76f5f56f13} 
+\index{GameManager@{GameManager}!levelUpScreen@{levelUpScreen}}
+\index{levelUpScreen@{levelUpScreen}!GameManager@{GameManager}}
+\doxysubsubsection{levelUpScreen}
+{\footnotesize\ttfamily Game\+Object Game\+Manager.\+level\+Up\+Screen}
+
+\label{class_game_manager_abb8db6bdd76b1f46eaf3e0d2ba55e432} 
+\index{GameManager@{GameManager}!pauseScreen@{pauseScreen}}
+\index{pauseScreen@{pauseScreen}!GameManager@{GameManager}}
+\doxysubsubsection{pauseScreen}
+{\footnotesize\ttfamily Game\+Object Game\+Manager.\+pause\+Screen}
+
+\label{class_game_manager_aa312586b804b35ef858a973d3066d52e} 
+\index{GameManager@{GameManager}!previousState@{previousState}}
+\index{previousState@{previousState}!GameManager@{GameManager}}
+\doxysubsubsection{previousState}
+{\footnotesize\ttfamily \textbf{ Game\+State} Game\+Manager.\+previous\+State}
+
+\label{class_game_manager_a531f52ea63ec99b9b91c5df4ca620b59} 
+\index{GameManager@{GameManager}!resultScreen@{resultScreen}}
+\index{resultScreen@{resultScreen}!GameManager@{GameManager}}
+\doxysubsubsection{resultScreen}
+{\footnotesize\ttfamily Game\+Object Game\+Manager.\+result\+Screen}
+
+\label{class_game_manager_a1dbaac33864c8b1d2068147a39f32086} 
+\index{GameManager@{GameManager}!timeSurvivedDisplay@{timeSurvivedDisplay}}
+\index{timeSurvivedDisplay@{timeSurvivedDisplay}!GameManager@{GameManager}}
+\doxysubsubsection{timeSurvivedDisplay}
+{\footnotesize\ttfamily Text Game\+Manager.\+time\+Survived\+Display}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+:/\+Vampire-\/\+Survivors/\+Vampire-\/\+Survivors/\+Assets/\+Scripts/\textbf{ Game\+Manager.\+cs}\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\doxysection{Undead\+Executioner\+Stats Class Reference}
+\label{class_undead_executioner_stats}\index{UndeadExecutionerStats@{UndeadExecutionerStats}}
+Inheritance diagram for Undead\+Executioner\+Stats\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_undead_executioner_stats}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \textbf{ Take\+Damage} (float dmg)
+\item 
+override void \textbf{ Kill} ()
+\item 
+void \textbf{ Melee\+Attack} ()
+\item 
+void \textbf{ Spell\+Attack} ()
+\item 
+void \textbf{ Heal} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ Enemy\+Stats}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Take\+Damage} (float dmg)
+\item 
+virtual void \textbf{ Kill} ()
+\item 
+float \textbf{ get\+Health} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \textbf{ heal\+Value}
+\item 
+\textbf{ Undead\+Executioner\+Animator} \textbf{ animator}
+\item 
+\textbf{ Detection\+Script} \textbf{ melee\+Range}
+\item 
+\textbf{ Detection\+Script} \textbf{ spell\+Range}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \textbf{ Enemy\+Stats}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Enemy\+Scriptable\+Object} \textbf{ enemy\+Data}
+\item 
+float \textbf{ current\+Move\+Speed}
+\item 
+float \textbf{ current\+Health}
+\item 
+float \textbf{ current\+Damage}
+\item 
+float \textbf{ despawn\+Distance} = 20f
+\item 
+bool \textbf{ is\+Enemy\+In\+Contact} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \textbf{ Enemy\+Stats}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Awake} ()
+\item 
+virtual void \textbf{ Start} ()
+\item 
+virtual void \textbf{ Update} ()
+\item 
+virtual void \textbf{ On\+Trigger\+Enter2D} (Collider2D col)
+\item 
+virtual void \textbf{ On\+Trigger\+Exit2D} (Collider2D col)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \textbf{ Enemy\+Stats}}
+\begin{DoxyCompactItemize}
+\item 
+Collider2D \textbf{ collider}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_undead_executioner_stats_a0351d009f847cbd8cb78d6de42de9043} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!Heal@{Heal}}
+\index{Heal@{Heal}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{Heal()}
+{\footnotesize\ttfamily void Undead\+Executioner\+Stats.\+Heal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_undead_executioner_stats_ada2d342396fe820f0efb961001b5a409} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!Kill@{Kill}}
+\index{Kill@{Kill}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{Kill()}
+{\footnotesize\ttfamily override void Undead\+Executioner\+Stats.\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \textbf{ Enemy\+Stats} \doxyref{}{p.}{class_enemy_stats_adc85fe441faae57eb75eb741c50e5f2e}.
+
+\label{class_undead_executioner_stats_a8ae13ef08f2506f2e097035767d9779c} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!MeleeAttack@{MeleeAttack}}
+\index{MeleeAttack@{MeleeAttack}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{MeleeAttack()}
+{\footnotesize\ttfamily void Undead\+Executioner\+Stats.\+Melee\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_undead_executioner_stats_af64273b9d9c77bc78850caed258d9cc3} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!SpellAttack@{SpellAttack}}
+\index{SpellAttack@{SpellAttack}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{SpellAttack()}
+{\footnotesize\ttfamily void Undead\+Executioner\+Stats.\+Spell\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_undead_executioner_stats_abee5bb974e832ae7fa53267da64ba604} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{TakeDamage()}
+{\footnotesize\ttfamily override void Undead\+Executioner\+Stats.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{dmg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \textbf{ Enemy\+Stats} \doxyref{}{p.}{class_enemy_stats_af6bd581b89bff970db7c06ecb7d9f801}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\label{class_undead_executioner_stats_aaf427ca7e10a8c4a37199cce898fbcef} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!animator@{animator}}
+\index{animator@{animator}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{animator}
+{\footnotesize\ttfamily \textbf{ Undead\+Executioner\+Animator} Undead\+Executioner\+Stats.\+animator}
+
+\label{class_undead_executioner_stats_a6d914a70bb9ae0e5b4d3d4e3026ea616} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!healValue@{healValue}}
+\index{healValue@{healValue}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{healValue}
+{\footnotesize\ttfamily float Undead\+Executioner\+Stats.\+heal\+Value}
+
+\label{class_undead_executioner_stats_ad599fe69de79c7b7a33aef8980763e87} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!meleeRange@{meleeRange}}
+\index{meleeRange@{meleeRange}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{meleeRange}
+{\footnotesize\ttfamily \textbf{ Detection\+Script} Undead\+Executioner\+Stats.\+melee\+Range}
+
+\label{class_undead_executioner_stats_a8136432ec5c759d25375147366625f5b} 
+\index{UndeadExecutionerStats@{UndeadExecutionerStats}!spellRange@{spellRange}}
+\index{spellRange@{spellRange}!UndeadExecutionerStats@{UndeadExecutionerStats}}
+\doxysubsubsection{spellRange}
+{\footnotesize\ttfamily \textbf{ Detection\+Script} Undead\+Executioner\+Stats.\+spell\+Range}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+:/\+Vampire-\/\+Survivors/\+Vampire-\/\+Survivors/\+Assets/\+Scripts/\+Enemy/\+Bosses/\+Undead Executioner/\textbf{ Undead\+Executioner\+Stats.\+cs}\end{DoxyCompactItemize}

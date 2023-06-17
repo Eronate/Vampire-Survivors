@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+// using UnityEditor.Animations;
 using UnityEngine;
 
 public class CharacterSelector : MonoBehaviour
@@ -8,7 +8,7 @@ public class CharacterSelector : MonoBehaviour
     public static CharacterSelector instance;
     public CharacterScriptableObject characterData;
     public Sprite characterSprite;
-    public AnimatorController characterAnimatorController;
+    public RuntimeAnimatorController characterAnimatorController;
     void Awake()
     {
         if (instance == null)
@@ -31,7 +31,7 @@ public class CharacterSelector : MonoBehaviour
     {
         return instance.characterSprite;
     }
-    public static AnimatorController GetAnimator()
+    public static RuntimeAnimatorController GetAnimator()
     {
         return instance.characterAnimatorController;
     }
@@ -43,7 +43,7 @@ public class CharacterSelector : MonoBehaviour
     {
         characterSprite = sprite;
     }
-    public void SelectAnimatorController(AnimatorController controller)
+    public void SelectAnimatorController(RuntimeAnimatorController controller)
     {
         characterAnimatorController = controller;
     }

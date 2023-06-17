@@ -1,0 +1,163 @@
+\doxysection{Enemy\+Stats Class Reference}
+\label{class_enemy_stats}\index{EnemyStats@{EnemyStats}}
+Inheritance diagram for Enemy\+Stats\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_enemy_stats}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Take\+Damage} (float dmg)
+\item 
+virtual void \textbf{ Kill} ()
+\item 
+float \textbf{ get\+Health} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Enemy\+Scriptable\+Object} \textbf{ enemy\+Data}
+\item 
+float \textbf{ current\+Move\+Speed}
+\item 
+float \textbf{ current\+Health}
+\item 
+float \textbf{ current\+Damage}
+\item 
+float \textbf{ despawn\+Distance} = 20f
+\item 
+bool \textbf{ is\+Enemy\+In\+Contact} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Awake} ()
+\item 
+virtual void \textbf{ Start} ()
+\item 
+virtual void \textbf{ Update} ()
+\item 
+virtual void \textbf{ On\+Trigger\+Enter2D} (Collider2D col)
+\item 
+virtual void \textbf{ On\+Trigger\+Exit2D} (Collider2D col)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Collider2D \textbf{ collider}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_enemy_stats_aa61f42e1ed1912274e16b413943215ce} 
+\index{EnemyStats@{EnemyStats}!Awake@{Awake}}
+\index{Awake@{Awake}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{Awake()}
+{\footnotesize\ttfamily virtual void Enemy\+Stats.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\label{class_enemy_stats_adb8b9092026baa1d39dc7e730d6ef6d8} 
+\index{EnemyStats@{EnemyStats}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{getHealth()}
+{\footnotesize\ttfamily float Enemy\+Stats.\+get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\label{class_enemy_stats_adc85fe441faae57eb75eb741c50e5f2e} 
+\index{EnemyStats@{EnemyStats}!Kill@{Kill}}
+\index{Kill@{Kill}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{Kill()}
+{\footnotesize\ttfamily virtual void Enemy\+Stats.\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ Evil\+Wizard\+Stats} \doxyref{}{p.}{class_evil_wizard_stats_a7bca2b93e8705b4ddbedd346e61dee96}, \textbf{ Undead\+Executioner\+Stats} \doxyref{}{p.}{class_undead_executioner_stats_ada2d342396fe820f0efb961001b5a409}, and \textbf{ Melee\+Enemy\+Stats} \doxyref{}{p.}{class_melee_enemy_stats_ad8d3efa335886aa1ff34b4f0a96e5208}.
+
+\label{class_enemy_stats_ae8cf7e172fa156965919284498dbfc09} 
+\index{EnemyStats@{EnemyStats}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{OnTriggerEnter2D()}
+{\footnotesize\ttfamily virtual void Enemy\+Stats.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ Melee\+Enemy\+Stats} \doxyref{}{p.}{class_melee_enemy_stats_ab965b7d5f878358e13cfa0c519141472}.
+
+\label{class_enemy_stats_a177b75dfbdb85f1f26e471b9a7669701} 
+\index{EnemyStats@{EnemyStats}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{OnTriggerExit2D()}
+{\footnotesize\ttfamily virtual void Enemy\+Stats.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\label{class_enemy_stats_a9726fae9e43d356569ff37ba36f03ef2} 
+\index{EnemyStats@{EnemyStats}!Start@{Start}}
+\index{Start@{Start}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{Start()}
+{\footnotesize\ttfamily virtual void Enemy\+Stats.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\label{class_enemy_stats_af6bd581b89bff970db7c06ecb7d9f801} 
+\index{EnemyStats@{EnemyStats}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{TakeDamage()}
+{\footnotesize\ttfamily virtual void Enemy\+Stats.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{dmg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ Evil\+Wizard\+Stats} \doxyref{}{p.}{class_evil_wizard_stats_a40fc6a6f2d120c43641e453b47523099}, \textbf{ Undead\+Executioner\+Stats} \doxyref{}{p.}{class_undead_executioner_stats_abee5bb974e832ae7fa53267da64ba604}, and \textbf{ Melee\+Enemy\+Stats} \doxyref{}{p.}{class_melee_enemy_stats_a35143c1fd0db7a88f53000df93c25194}.
+
+\label{class_enemy_stats_a260fcd35008e7dc1f78a260d43a4dff3} 
+\index{EnemyStats@{EnemyStats}!Update@{Update}}
+\index{Update@{Update}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{Update()}
+{\footnotesize\ttfamily virtual void Enemy\+Stats.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\label{class_enemy_stats_a4836d1b8683afbc7e5339b22560acbf2} 
+\index{EnemyStats@{EnemyStats}!collider@{collider}}
+\index{collider@{collider}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{collider}
+{\footnotesize\ttfamily Collider2D Enemy\+Stats.\+collider\hspace{0.3cm}{\ttfamily [protected]}}
+
+\label{class_enemy_stats_a849593958984971b9a28748988c92d62} 
+\index{EnemyStats@{EnemyStats}!currentDamage@{currentDamage}}
+\index{currentDamage@{currentDamage}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{currentDamage}
+{\footnotesize\ttfamily float Enemy\+Stats.\+current\+Damage}
+
+\label{class_enemy_stats_a3aa2e31f907ed90f73127871b93bb38d} 
+\index{EnemyStats@{EnemyStats}!currentHealth@{currentHealth}}
+\index{currentHealth@{currentHealth}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{currentHealth}
+{\footnotesize\ttfamily float Enemy\+Stats.\+current\+Health}
+
+\label{class_enemy_stats_abd25223e80b0ffcdac1bcb1f8c8a22d8} 
+\index{EnemyStats@{EnemyStats}!currentMoveSpeed@{currentMoveSpeed}}
+\index{currentMoveSpeed@{currentMoveSpeed}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{currentMoveSpeed}
+{\footnotesize\ttfamily float Enemy\+Stats.\+current\+Move\+Speed}
+
+\label{class_enemy_stats_a4fc5bc53bd73d2f09e7ab9954c9c04c0} 
+\index{EnemyStats@{EnemyStats}!despawnDistance@{despawnDistance}}
+\index{despawnDistance@{despawnDistance}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{despawnDistance}
+{\footnotesize\ttfamily float Enemy\+Stats.\+despawn\+Distance = 20f}
+
+\label{class_enemy_stats_adcdd09e4784118e8373adeab3f9d4463} 
+\index{EnemyStats@{EnemyStats}!enemyData@{enemyData}}
+\index{enemyData@{enemyData}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{enemyData}
+{\footnotesize\ttfamily \textbf{ Enemy\+Scriptable\+Object} Enemy\+Stats.\+enemy\+Data}
+
+\label{class_enemy_stats_a3b95a93ff1d5d67a561bf99c1269bb3d} 
+\index{EnemyStats@{EnemyStats}!isEnemyInContact@{isEnemyInContact}}
+\index{isEnemyInContact@{isEnemyInContact}!EnemyStats@{EnemyStats}}
+\doxysubsubsection{isEnemyInContact}
+{\footnotesize\ttfamily bool Enemy\+Stats.\+is\+Enemy\+In\+Contact = false}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+:/\+Vampire-\/\+Survivors/\+Vampire-\/\+Survivors/\+Assets/\+Scripts/\+Enemy/\textbf{ Enemy\+Stats.\+cs}\end{DoxyCompactItemize}

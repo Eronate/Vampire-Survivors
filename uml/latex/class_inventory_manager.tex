@@ -1,0 +1,105 @@
+\doxysection{Inventory\+Manager Class Reference}
+\label{class_inventory_manager}\index{InventoryManager@{InventoryManager}}
+Inheritance diagram for Inventory\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inventory_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Add\+Weapon} (int slot\+Index, \textbf{ Weapon\+Controller} weapon)
+\item 
+void \textbf{ Add\+Passive\+Item} (int slot\+Index, \textbf{ Passive\+Item} passive\+Item)
+\item 
+void \textbf{ Level\+Up\+Weapon} (int slot\+Index)
+\item 
+void \textbf{ Level\+Up\+Passive\+Item} (int slot\+Index)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \textbf{ Weapon\+Controller} $>$ \textbf{ weapon\+Slots} = new List$<$\textbf{ Weapon\+Controller}$>$(6)
+\item 
+int[$\,$] \textbf{ weapon\+Levels} = new int[6]
+\item 
+List$<$ Image $>$ \textbf{ weapon\+UISlots} = new List$<$Image$>$(6)
+\item 
+List$<$ \textbf{ Passive\+Item} $>$ \textbf{ passive\+Item\+Slots} = new List$<$\textbf{ Passive\+Item}$>$(6)
+\item 
+int[$\,$] \textbf{ passive\+Item\+Levels} = new int[6]
+\item 
+List$<$ Image $>$ \textbf{ passive\+Item\+UISlots} = new List$<$Image$>$(6)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_inventory_manager_a5d510bab2293d0496d5512e061781e6f} 
+\index{InventoryManager@{InventoryManager}!AddPassiveItem@{AddPassiveItem}}
+\index{AddPassiveItem@{AddPassiveItem}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{AddPassiveItem()}
+{\footnotesize\ttfamily void Inventory\+Manager.\+Add\+Passive\+Item (\begin{DoxyParamCaption}\item[{int}]{slot\+Index,  }\item[{\textbf{ Passive\+Item}}]{passive\+Item }\end{DoxyParamCaption})}
+
+\label{class_inventory_manager_ae58738d2a94898eae3a708727e9d5b40} 
+\index{InventoryManager@{InventoryManager}!AddWeapon@{AddWeapon}}
+\index{AddWeapon@{AddWeapon}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{AddWeapon()}
+{\footnotesize\ttfamily void Inventory\+Manager.\+Add\+Weapon (\begin{DoxyParamCaption}\item[{int}]{slot\+Index,  }\item[{\textbf{ Weapon\+Controller}}]{weapon }\end{DoxyParamCaption})}
+
+\label{class_inventory_manager_ab6dd7c4ddcd600405e29bca9dbf5fec2} 
+\index{InventoryManager@{InventoryManager}!LevelUpPassiveItem@{LevelUpPassiveItem}}
+\index{LevelUpPassiveItem@{LevelUpPassiveItem}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{LevelUpPassiveItem()}
+{\footnotesize\ttfamily void Inventory\+Manager.\+Level\+Up\+Passive\+Item (\begin{DoxyParamCaption}\item[{int}]{slot\+Index }\end{DoxyParamCaption})}
+
+\label{class_inventory_manager_ac6a6e85784b209684bc52f42951e7bb1} 
+\index{InventoryManager@{InventoryManager}!LevelUpWeapon@{LevelUpWeapon}}
+\index{LevelUpWeapon@{LevelUpWeapon}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{LevelUpWeapon()}
+{\footnotesize\ttfamily void Inventory\+Manager.\+Level\+Up\+Weapon (\begin{DoxyParamCaption}\item[{int}]{slot\+Index }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\label{class_inventory_manager_aeb456a67de52592620a8a17c5fe028d4} 
+\index{InventoryManager@{InventoryManager}!passiveItemLevels@{passiveItemLevels}}
+\index{passiveItemLevels@{passiveItemLevels}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{passiveItemLevels}
+{\footnotesize\ttfamily int [$\,$] Inventory\+Manager.\+passive\+Item\+Levels = new int[6]}
+
+\label{class_inventory_manager_a52c4bb799124b84c4aa2b483b182d09c} 
+\index{InventoryManager@{InventoryManager}!passiveItemSlots@{passiveItemSlots}}
+\index{passiveItemSlots@{passiveItemSlots}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{passiveItemSlots}
+{\footnotesize\ttfamily List$<$\textbf{ Passive\+Item}$>$ Inventory\+Manager.\+passive\+Item\+Slots = new List$<$\textbf{ Passive\+Item}$>$(6)}
+
+\label{class_inventory_manager_acb328c5968a12add2fabd1b32a58d6cd} 
+\index{InventoryManager@{InventoryManager}!passiveItemUISlots@{passiveItemUISlots}}
+\index{passiveItemUISlots@{passiveItemUISlots}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{passiveItemUISlots}
+{\footnotesize\ttfamily List$<$Image$>$ Inventory\+Manager.\+passive\+Item\+UISlots = new List$<$Image$>$(6)}
+
+\label{class_inventory_manager_a006d08b1c034bb006066835407c2846d} 
+\index{InventoryManager@{InventoryManager}!weaponLevels@{weaponLevels}}
+\index{weaponLevels@{weaponLevels}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{weaponLevels}
+{\footnotesize\ttfamily int [$\,$] Inventory\+Manager.\+weapon\+Levels = new int[6]}
+
+\label{class_inventory_manager_af577c597c70da59940a2a3479e9cf97d} 
+\index{InventoryManager@{InventoryManager}!weaponSlots@{weaponSlots}}
+\index{weaponSlots@{weaponSlots}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{weaponSlots}
+{\footnotesize\ttfamily List$<$\textbf{ Weapon\+Controller}$>$ Inventory\+Manager.\+weapon\+Slots = new List$<$\textbf{ Weapon\+Controller}$>$(6)}
+
+\label{class_inventory_manager_afde6cbf2967de95ab413867526f33960} 
+\index{InventoryManager@{InventoryManager}!weaponUISlots@{weaponUISlots}}
+\index{weaponUISlots@{weaponUISlots}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{weaponUISlots}
+{\footnotesize\ttfamily List$<$Image$>$ Inventory\+Manager.\+weapon\+UISlots = new List$<$Image$>$(6)}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+:/\+Vampire-\/\+Survivors/\+Vampire-\/\+Survivors/\+Assets/\+Scripts/\+Player/\textbf{ Inventory\+Manager.\+cs}\end{DoxyCompactItemize}
