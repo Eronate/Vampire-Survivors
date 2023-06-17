@@ -4,6 +4,9 @@ Description: 2D unity game in the style of Vampire Survivors, with some twists: 
 with the intention of reaching as high a level as possible. The difficulty spikes later into the game, and we made sure there's build options you can choose,
 and randomized enemies so no playthrough is the same.
 
+### Demo:
+[](https://youtu.be/ntV570WS-AY)
+
 ## User stories:
 As an user, I:
 ### MUST HAVE:
