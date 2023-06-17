@@ -244,7 +244,6 @@ public class PlayerStats : MonoBehaviour
             CurrentHealth -= dmg;
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;
-            hitSoundEffect.Play();
           //  healthbar.SetHealth(CurrentHealth);
             healthbar_player.SetHealth(CurrentHealth);
 
@@ -252,9 +251,13 @@ public class PlayerStats : MonoBehaviour
             {
                 Kill();
             }
+            else
+            {
+                hitSoundEffect.Play();
+            }
         }
     }
-        public void Kill()
+    public void Kill()
     {
         if (!GameManager.instance.isOver)
         {
@@ -263,7 +266,7 @@ public class PlayerStats : MonoBehaviour
             GameManager.instance.AssignChosenWeaponAndPassiveItemUI(inventory.weaponUISlots, inventory.passiveItemUISlots);
             GameManager.instance.GameOver();
         }
-        Debug.Log("PLAYER IS DEAD");
+        // Debug.Log("PLAYER IS DEAD");
     }
 
     public void RestoreHealth(float amount)

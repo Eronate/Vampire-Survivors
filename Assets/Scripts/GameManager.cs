@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
             ChangeState(previousState);
             Time.timeScale = 1f;
             pauseScreen.SetActive(false);
-            Debug.Log("Game is resumed");
+            // Debug.Log("Game is resumed");
         }
         if(currentState == GameState.LevelUp)
         {
@@ -219,5 +219,9 @@ public class GameManager : MonoBehaviour
     public GameObject getResultScreen()
     {
         return resultScreen;
+    }
+    public void StopTime()
+    {
+        Time.timeScale = 0f;
     }
 }
