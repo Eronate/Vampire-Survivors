@@ -5,10 +5,7 @@ with the intention of reaching as high a level as possible. The difficulty spike
 and randomized enemies so no playthrough is the same.
 
 ### Demo:
-<video width="600" height="337" controls>
-  <source src="[VIDEO_URL](https://youtu.be/ntV570WS-AY)" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://youtu.be/ntV570WS-AY
 
 ## User stories:
 As an user, I:
