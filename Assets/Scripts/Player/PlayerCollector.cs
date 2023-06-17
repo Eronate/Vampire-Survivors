@@ -8,6 +8,8 @@ public class PlayerCollector : MonoBehaviour
     PlayerStats player;
     CircleCollider2D playerCollector;
     public float pullSpeed;
+    [SerializeField]
+    private AudioSource gemCollectSound;
      void Start()
     {
         player = FindObjectOfType<PlayerStats>();
@@ -36,5 +38,6 @@ public class PlayerCollector : MonoBehaviour
                 rb.AddForce(forceDirection * pullSpeed);
                 yield return new WaitForSeconds(0.02f);
             }
+       gemCollectSound.Play();
     }
 }
