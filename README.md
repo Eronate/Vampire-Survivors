@@ -5,6 +5,7 @@ with the intention of reaching as high a level as possible. The difficulty spike
 and randomized enemies so no playthrough is the same.
 
 ## User stories:
+As an user, I:
 ### MUST HAVE:
 - a menu that allows me to customize my character, power up and have access to a variety of settings
 - multiple choices towards a build that will let me advance into the game, that is met through different weapons or power ups/passives.
