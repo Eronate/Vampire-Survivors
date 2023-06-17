@@ -141,6 +141,8 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject secondWeaponTest;
     public GameObject firstPassiveItemTest, secondPassiveItemTest;
+    [SerializeField]
+    private AudioSource hitSoundEffect;
 
     private void Awake()
     {
@@ -242,6 +244,7 @@ public class PlayerStats : MonoBehaviour
             CurrentHealth -= dmg;
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;
+            hitSoundEffect.Play();
           //  healthbar.SetHealth(CurrentHealth);
             healthbar_player.SetHealth(CurrentHealth);
 
